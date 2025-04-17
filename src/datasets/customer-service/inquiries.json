@@ -1,0 +1,65 @@
+[
+  {
+    "id": "CS-2025-001",
+    "customer": {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "accountId": "CUST-10045"
+    },
+    "subject": "Order Delivery Delay",
+    "priority": "Medium",
+    "category": "Order Issues",
+    "inquiry": "I placed an order (Order #ORD-9876) on March 10th with expected delivery by March 15th, but I still haven't received my items. Can you please check the status of my order and let me know when I can expect delivery?",
+    "expectedResponse": {
+      "acknowledgment": true,
+      "checkOrderStatus": true,
+      "provideUpdatedTimeline": true,
+      "offerCompensation": false,
+      "escalationPath": "if delivery is more than 10 days late"
+    },
+    "complexity": "Low"
+  },
+  {
+    "id": "CS-2025-002",
+    "customer": {
+      "name": "Sarah Johnson",
+      "email": "sarah.j@example.com",
+      "accountId": "CUST-20567"
+    },
+    "subject": "Product Defect and Return Request",
+    "priority": "High",
+    "category": "Returns & Refunds",
+    "inquiry": "I recently purchased your Premium Wireless Headphones (Model XH-500) and noticed that the right earpiece isn't producing any sound. I've tried resetting them and following all troubleshooting steps in the manual, but the issue persists. I'd like to return them for a replacement or refund. My order number is ORD-7654 and I purchased them on March 5th.",
+    "expectedResponse": {
+      "acknowledgment": true,
+      "offerTroubleshooting": true,
+      "explainReturnPolicy": true,
+      "provideReturnInstructions": true,
+      "offerReplacement": true,
+      "mentionWarranty": true
+    },
+    "complexity": "Medium"
+  },
+  {
+    "id": "CS-2025-003",
+    "customer": {
+      "name": "Michael Chen",
+      "email": "m.chen@example.com",
+      "accountId": "CUST-30982"
+    },
+    "subject": "Subscription Cancellation and Partial Refund",
+    "priority": "High",
+    "category": "Billing & Subscriptions",
+    "inquiry": "I need to cancel my annual premium subscription that I purchased last month. I was charged $199 for the full year, but I've only used the service for about 3 weeks. According to your terms, I should be eligible for a prorated refund for the unused portion. Please cancel my subscription immediately and process the appropriate refund. My subscription ID is SUB-45678.",
+    "expectedResponse": {
+      "acknowledgment": true,
+      "confirmCancellationEligibility": true,
+      "explainProrationCalculation": true,
+      "processCancellation": true,
+      "confirmRefundAmount": true,
+      "provideRefundTimeline": true,
+      "retentionAttempt": "optional but not aggressive"
+    },
+    "complexity": "High"
+  }
+]
