@@ -10,6 +10,12 @@ import { z } from 'zod'
 const router = createOpenAI({
   // custom settings, e.g.
   compatibility: 'strict', // strict mode, enable when using the OpenAI API
+  apiKey: process.env.AI_GATEWAY_TOKEN,
+  baseURL: process.env.AI_GATEWAY_URL,
+  headers: {
+    "HTTP-Referer": "https://workflows.do", // Optional. Site URL for rankings on openrouter.ai.
+    "X-Title": "Workflows.do Business-as-Code", // Optional. Site title for rankings on openrouter.ai.
+  }
 })
 
 const expected = JSON.stringify({
@@ -46,30 +52,19 @@ const expected = JSON.stringify({
 // ]
 
 evalite('Test W2 OCR', {
-  data: async () => [
-    ...models.map((model) => ({
-      input: `What's the capital of France?`,
-      expected: `Paris`,
-      model,
-    })),
-    // {
-    //   input: `What's the capital of France?`,
-    //   expected: `Paris`,
-    // },
-    // {
-    //   input: `What's the capital of Germany?`,
-    //   expected: `Berlin`,
-    // },
-  ],
+  data: async () => models.map((model) => ({
+    input: { model, image: 'https://github.com/vercel/ai/blob/main/examples/ai-core/data/w2.png?raw=true' },
+    expected,
+  })),
   task: async (input) => {
     const result = await generateObject({
-      model: traceAISDKModel(router(models[0], { structuredOutputs: true })),
+      model: traceAISDKModel(router(input.model, { structuredOutputs: true })),
       messages: [
         {
           role: 'user',
           content: [
             { type: 'text', text: 'Extract the data from the image.' },
-            { type: 'image', image: 'https://github.com/vercel/ai/blob/main/examples/ai-core/data/w2.png?raw=true' },
+            { type: 'image', image: input.image },
           ],
         },
       ],
