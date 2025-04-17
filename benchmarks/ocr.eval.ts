@@ -49,10 +49,10 @@ const expected = JSON.stringify({
 })
 
 
-// const images = [1,2,3,4,5]
-const images = [3,4,5]
+const images = [1,2,3,4,5,6]
+// const images = [3,4,5]
 // const blurs = [0,1,2,3]
-const blurs = [0]
+const blurs = [0,1]
 const resolution = [512, 768, 1536, 2000, 3072]
   
 for (const model of models) {
@@ -118,11 +118,11 @@ for (const model of models) {
             require_parameters: true,
           },
         }
-      })
+      }).catch(console.error)
   
-      console.log(model, input.image, result.object)
+      console.log(model, input.image, result?.object)
 
-      return result.object
+      return result?.object
     },
     scorers: [JSONDiff],
   })
