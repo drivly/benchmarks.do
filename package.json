@@ -2,21 +2,37 @@
   "name": "benchmarks.do",
   "version": "0.1.0",
   "type": "module",
-  "dependencies": {
-    "autoevals": "^0.0.127",
-    "evalite": "^0.10.0",
-    "evals.do": "latest",
-    "functions.do": "^0.0.5"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.1",
-    "typescript": "^5.0.0"
-  },
   "scripts": {
     "benchmark": "ts-node-esm index.ts",
     "benchmark:information-extraction": "ts-node-esm benchmarks/information-extraction/index.ts",
     "benchmark:decision-classification": "ts-node-esm benchmarks/decision-classification/index.ts",
     "benchmark:text-classification": "ts-node-esm benchmarks/text-classification/index.ts",
-    "benchmark:agentic-tool-use": "ts-node-esm benchmarks/agentic-tool-use/index.ts"
+    "benchmark:agentic-tool-use": "ts-node-esm benchmarks/agentic-tool-use/index.ts",
+    "eval": "evalite watch ocr.eval.ts",
+    "format": "prettier --write ."
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^1.3.16",
+    "@ai-sdk/openai-compatible": "^0.2.11",
+    "ai": "^4.3.9",
+    "autoevals": "^0.0.127",
+    "better-sqlite3": "^11.9.1",
+    "evalite": "^0.10.0",
+    "evals.do": "latest",
+    "functions.do": "^0.0.5",
+    "vitest": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "dotenv": "^16.5.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.0.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 180,
+    "tabWidth": 2,
+    "semi": false
   }
 }
