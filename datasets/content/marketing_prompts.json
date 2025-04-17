@@ -6,19 +6,9 @@
       "name": "EcoBoost Smart Thermostat",
       "category": "Home Automation",
       "targetAudience": "Environmentally conscious homeowners",
-      "keyFeatures": [
-        "AI-powered temperature optimization",
-        "Energy usage analytics",
-        "Mobile app control",
-        "Voice assistant integration",
-        "Geofencing capabilities"
-      ],
+      "keyFeatures": ["AI-powered temperature optimization", "Energy usage analytics", "Mobile app control", "Voice assistant integration", "Geofencing capabilities"],
       "pricePoint": "Premium",
-      "uniqueSellingPoints": [
-        "Reduces energy consumption by up to 35%",
-        "Self-learning algorithm adapts to your lifestyle",
-        "Carbon footprint tracking"
-      ]
+      "uniqueSellingPoints": ["Reduces energy consumption by up to 35%", "Self-learning algorithm adapts to your lifestyle", "Carbon footprint tracking"]
     },
     "promptRequirements": {
       "tone": "Professional yet approachable",

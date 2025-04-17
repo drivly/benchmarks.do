@@ -27,5 +27,5 @@ export const models = [
   'meta-llama/llama-4-scout',
   'x-ai/grok-3-beta',
   'x-ai/grok-3-mini-beta',
-  'x-ai/grok-3-nano-beta'
+  'x-ai/grok-3-nano-beta',
 ]

@@ -14,13 +14,13 @@
         "description": "Premium Paper (500 sheets)",
         "quantity": 10,
         "unitPrice": 12.99,
-        "total": 129.90
+        "total": 129.9
       },
       {
         "description": "Ink Cartridges (Black)",
         "quantity": 5,
-        "unitPrice": 24.50,
-        "total": 122.50
+        "unitPrice": 24.5,
+        "total": 122.5
       },
       {
         "description": "Desk Organizers",
@@ -55,18 +55,18 @@
       {
         "description": "Software Licenses (Annual)",
         "quantity": 10,
-        "unitPrice": 199.00,
-        "total": 1990.00
+        "unitPrice": 199.0,
+        "total": 1990.0
       },
       {
         "description": "IT Support (10 hours)",
         "quantity": 1,
-        "unitPrice": 850.00,
-        "total": 850.00
+        "unitPrice": 850.0,
+        "total": 850.0
       }
     ],
     "subtotal": 6739.97,
-    "tax": 606.60,
+    "tax": 606.6,
     "total": 7346.57,
     "paymentTerms": "Net 45",
     "notes": "Please contact your account manager for any questions"
