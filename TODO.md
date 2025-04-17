@@ -1,9 +1,33 @@
-# Benchmarks.do TODO
+# TODO: LLM Benchmarking for Business Use Cases
 
-This document outlines the planned benchmarks and synthetic datasets for evaluating AI functions across various business domains.
+## Project Structure
+- [ ] Set up GitHub Actions for on-demand benchmarks
+- [ ] Structure repository for benchmark categories:
+  - Information Extraction
+  - Context-Aware Next-Step Decision Classification
+  - Structured Text Classification
+  - Agentic Tool Use
 
-## Information Extraction
+## Tasks by Category
 
+### Information Extraction
+- [ ] Synthetic dataset creation
+  - [ ] Create sample documents with embedded information (invoices, receipts, reports)
+  - [ ] Establish ground truth annotations for extraction targets
+  - [ ] Implement data augmentation for variations
+- [ ] Benchmark implementation
+  - [ ] Define extraction tasks (e.g., extract key fields from invoices/documents)
+  - [ ] Implement benchmark using evalite pattern
+  - [ ] Configure AI function calls for extraction
+- [ ] Evaluation metrics
+  - [ ] Field accuracy metrics
+  - [ ] Field completeness metrics
+  - [ ] Format compliance metrics
+- [ ] Reporting mechanisms
+  - [ ] Generate extraction accuracy reports
+  - [ ] Visualize extraction performance across models
+
+#### Business Use Cases for Information Extraction
 - [x] Invoice Data Extraction Benchmark
 - [ ] Resume Parsing Benchmark
   - **Industry Variations**:
@@ -36,40 +60,24 @@ This document outlines the planned benchmarks and synthetic datasets for evaluat
     - High: Complex legal documents with industry-specific terminology and cross-references
   - **Implementation Approach**: Adapt from existing contract review benchmark with expanded clause types and industry variations
 
-## Structured Text Classification
+### Context-Aware Next-Step Decision Classification
+- [ ] Synthetic dataset creation
+  - [ ] Generate sequences of business events
+  - [ ] Create decision points with context
+  - [ ] Establish expected next steps based on context
+- [ ] Benchmark implementation
+  - [ ] Define decision classification tasks
+  - [ ] Implement benchmark using evalite pattern
+  - [ ] Configure AI function calls for decision making
+- [ ] Evaluation metrics
+  - [ ] Decision accuracy metrics
+  - [ ] Context utilization metrics
+  - [ ] Confidence score evaluation
+- [ ] Reporting mechanisms
+  - [ ] Generate decision quality reports
+  - [ ] Compare model decision patterns
 
-- [ ] Support Ticket Classification Benchmark
-  - **Industry Variations**:
-    - Tech/IT: Internal helpdesk tickets (software issues, access requests, hardware problems)
-    - Retail: Customer service emails (order issues, product questions, return requests)
-    - Automotive: Maintenance inquiries (service scheduling, warranty claims, part availability)
-    - Insurance: IT support tickets (system access, application issues, security concerns)
-  - **Data Format**: JSON with ticket text, metadata, and contextual information
-  - **Ground Truth**: Expert-labeled categories, priority levels, and routing information
-  - **Evaluation Metrics**: Classification accuracy, priority assignment accuracy, response time prediction
-  - **Complexity Levels**:
-    - Low: Clear single-issue tickets with explicit requests
-    - Medium: Multi-issue tickets requiring categorization
-    - High: Ambiguous tickets with implicit requests and emotional content
-  - **Implementation Approach**: Generate synthetic tickets using templates and industry-specific issue patterns
-
-- [ ] Customer Feedback Analysis Benchmark
-  - **Industry Variations**:
-    - Retail: Product review sentiment (quality, usability, value assessment)
-    - Automotive: Service feedback (dealer experience, repair quality, customer service)
-    - Insurance: Complaint analysis (claims handling, policy clarity, customer service)
-    - Financial Services: Survey responses (service quality, app usability, recommendation likelihood)
-  - **Data Format**: JSON with feedback text, rating scales, and contextual information
-  - **Ground Truth**: Expert-labeled sentiment, key issues, actionable insights
-  - **Evaluation Metrics**: Sentiment accuracy, issue identification precision, actionability of extracted insights
-  - **Complexity Levels**:
-    - Low: Direct feedback with clear sentiment and specific issues
-    - Medium: Mixed sentiment feedback with multiple topics
-    - High: Nuanced feedback with implicit issues and comparative references
-  - **Implementation Approach**: Adapt from existing customer service benchmark with focus on sentiment and issue extraction
-
-## Context-Aware Next-Step Decision Classification
-
+#### Business Use Cases for Context-Aware Next-Step Decision Classification
 - [ ] Insurance Claim Processing Benchmark
   - **Industry Variations**:
     - Insurance: Auto/home claim triage (damage assessment, coverage verification, fraud detection)
@@ -112,8 +120,72 @@ This document outlines the planned benchmarks and synthetic datasets for evaluat
     - High: Complex orders with multiple constraints, substitutions, or priority conflicts
   - **Implementation Approach**: Generate synthetic orders using product catalogs and common ordering patterns
 
-## Agentic Tool Use
+### Structured Text Classification
+- [ ] Synthetic dataset creation
+  - [ ] Generate business documents with varying structures
+  - [ ] Create classification schemas
+  - [ ] Establish ground truth classifications
+- [ ] Benchmark implementation
+  - [ ] Define text classification tasks
+  - [ ] Implement benchmark using evalite pattern
+  - [ ] Configure AI function calls for classification
+- [ ] Evaluation metrics
+  - [ ] Classification accuracy metrics
+  - [ ] Multi-label classification metrics
+  - [ ] Confidence score evaluation
+- [ ] Reporting mechanisms
+  - [ ] Generate classification reports
+  - [ ] Visualize classification performance across models
 
+#### Business Use Cases for Structured Text Classification
+- [ ] Support Ticket Classification Benchmark
+  - **Industry Variations**:
+    - Tech/IT: Internal helpdesk tickets (software issues, access requests, hardware problems)
+    - Retail: Customer service emails (order issues, product questions, return requests)
+    - Automotive: Maintenance inquiries (service scheduling, warranty claims, part availability)
+    - Insurance: IT support tickets (system access, application issues, security concerns)
+  - **Data Format**: JSON with ticket text, metadata, and contextual information
+  - **Ground Truth**: Expert-labeled categories, priority levels, and routing information
+  - **Evaluation Metrics**: Classification accuracy, priority assignment accuracy, response time prediction
+  - **Complexity Levels**:
+    - Low: Clear single-issue tickets with explicit requests
+    - Medium: Multi-issue tickets requiring categorization
+    - High: Ambiguous tickets with implicit requests and emotional content
+  - **Implementation Approach**: Generate synthetic tickets using templates and industry-specific issue patterns
+
+- [ ] Customer Feedback Analysis Benchmark
+  - **Industry Variations**:
+    - Retail: Product review sentiment (quality, usability, value assessment)
+    - Automotive: Service feedback (dealer experience, repair quality, customer service)
+    - Insurance: Complaint analysis (claims handling, policy clarity, customer service)
+    - Financial Services: Survey responses (service quality, app usability, recommendation likelihood)
+  - **Data Format**: JSON with feedback text, rating scales, and contextual information
+  - **Ground Truth**: Expert-labeled sentiment, key issues, actionable insights
+  - **Evaluation Metrics**: Sentiment accuracy, issue identification precision, actionability of extracted insights
+  - **Complexity Levels**:
+    - Low: Direct feedback with clear sentiment and specific issues
+    - Medium: Mixed sentiment feedback with multiple topics
+    - High: Nuanced feedback with implicit issues and comparative references
+  - **Implementation Approach**: Adapt from existing customer service benchmark with focus on sentiment and issue extraction
+
+### Agentic Tool Use
+- [ ] Synthetic dataset creation
+  - [ ] Define tool interfaces and capabilities
+  - [ ] Create scenarios requiring tool use
+  - [ ] Establish expected tool usage patterns
+- [ ] Benchmark implementation
+  - [ ] Define agentic tasks requiring tool use
+  - [ ] Implement benchmark using evalite pattern
+  - [ ] Configure AI function calls with tool access
+- [ ] Evaluation metrics
+  - [ ] Tool selection accuracy
+  - [ ] Tool usage efficiency
+  - [ ] Task completion metrics
+- [ ] Reporting mechanisms
+  - [ ] Generate tool usage reports
+  - [ ] Analyze tool selection patterns
+
+#### Business Use Cases for Agentic Tool Use
 - [ ] Calendar/Tool Use Benchmark
   - **Industry Variations**:
     - All verticals: Meeting scheduling, data retrieval, task management

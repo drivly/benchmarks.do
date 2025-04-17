@@ -1,0 +1,66 @@
+[
+  {
+    "id": "MKT-2025-001",
+    "type": "Product Description",
+    "product": {
+      "name": "EcoBoost Smart Thermostat",
+      "category": "Home Automation",
+      "targetAudience": "Environmentally conscious homeowners",
+      "keyFeatures": ["AI-powered temperature optimization", "Energy usage analytics", "Mobile app control", "Voice assistant integration", "Geofencing capabilities"],
+      "pricePoint": "Premium",
+      "uniqueSellingPoints": ["Reduces energy consumption by up to 35%", "Self-learning algorithm adapts to your lifestyle", "Carbon footprint tracking"]
+    },
+    "promptRequirements": {
+      "tone": "Professional yet approachable",
+      "length": "150-200 words",
+      "callToAction": "Visit website for more information",
+      "emphasize": "Environmental benefits and cost savings",
+      "avoid": "Technical jargon that might confuse non-technical users"
+    }
+  },
+  {
+    "id": "MKT-2025-002",
+    "type": "Social Media Ad",
+    "campaign": {
+      "name": "Summer Fitness Challenge",
+      "platform": "Instagram",
+      "targetAudience": "Fitness enthusiasts aged 25-40",
+      "objective": "Drive sign-ups for 30-day fitness program",
+      "offerDetails": "20% early bird discount, free fitness tracker for first 100 sign-ups",
+      "duration": "2 weeks pre-launch campaign"
+    },
+    "promptRequirements": {
+      "tone": "Energetic and motivational",
+      "length": "50-70 words",
+      "callToAction": "Sign up now with link in bio",
+      "emphasize": "Community aspect and tangible results",
+      "include": "Relevant hashtags and emoji suggestions",
+      "visualSuggestions": "Before/after transformation or group workout imagery"
+    }
+  },
+  {
+    "id": "MKT-2025-003",
+    "type": "Blog Post",
+    "topic": {
+      "title": "The Future of Remote Work: Balancing Flexibility and Collaboration",
+      "industry": "Business/HR Technology",
+      "targetAudience": "HR professionals and business leaders",
+      "keyPoints": [
+        "Evolution of remote work technologies",
+        "Hybrid workplace models",
+        "Maintaining company culture remotely",
+        "Productivity measurement in distributed teams",
+        "Future predictions for workplace flexibility"
+      ],
+      "relatedProducts": "Virtual collaboration platform, employee engagement tools"
+    },
+    "promptRequirements": {
+      "tone": "Authoritative and insightful",
+      "length": "1200-1500 words",
+      "structure": "Introduction, 5 main sections, conclusion with actionable takeaways",
+      "SEO": "Include keywords related to remote work, hybrid workplace, and team collaboration",
+      "include": "Statistics, expert quotes, and real-world examples",
+      "callToAction": "Subscribe to newsletter for more insights"
+    }
+  }
+]

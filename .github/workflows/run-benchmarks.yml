@@ -1,0 +1,77 @@
+name: Run Benchmarks
+on:
+  workflow_dispatch:
+    inputs:
+      benchmark_category:
+        description: 'Category to run (or "all")'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - information-extraction
+          - decision-classification
+          - text-classification
+          - agentic-tool-use
+      models:
+        description: 'Models to test (comma-separated)'
+        required: false
+        default: 'gpt-4o,gpt-3.5-turbo,anthropic/claude-3.5-sonnet'
+
+jobs:
+  run-benchmarks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'pnpm'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Set environment variables
+        run: echo "OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}" >> $GITHUB_ENV
+
+      - name: Run benchmarks
+        run: |
+          if [[ "${{ github.event.inputs.benchmark_category }}" == "all" ]]; then
+            pnpm run benchmark
+          else
+            pnpm run benchmark:${{ github.event.inputs.benchmark_category }}
+          fi
+        env:
+          MODELS: ${{ github.event.inputs.models }}
+
+      - name: Upload benchmark results
+        uses: actions/upload-artifact@v3
+        with:
+          name: benchmark-results
+          path: results/
+          retention-days: 90
+
+      - name: Create PR with results
+        if: success()
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "Add benchmark results for ${{ github.event.inputs.benchmark_category }}"
+          title: "Benchmark Results: ${{ github.event.inputs.benchmark_category }}"
+          body: |
+            Benchmark results for ${{ github.event.inputs.benchmark_category }}
+            
+            Models tested: ${{ github.event.inputs.models || 'Default models' }}
+            
+            Run ID: ${{ github.run_id }}
+          branch: benchmark-results-${{ github.run_id }}
+          base: main
