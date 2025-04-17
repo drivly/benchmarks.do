@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "benchmark": "ts-node-esm index.ts",
+    "benchmark:information-extraction": "ts-node-esm benchmarks/information-extraction/index.ts",
+    "benchmark:decision-classification": "ts-node-esm benchmarks/decision-classification/index.ts",
+    "benchmark:text-classification": "ts-node-esm benchmarks/text-classification/index.ts",
+    "benchmark:agentic-tool-use": "ts-node-esm benchmarks/agentic-tool-use/index.ts",
     "eval": "evalite watch ocr.eval.ts",
     "format": "prettier --write ."
   },
