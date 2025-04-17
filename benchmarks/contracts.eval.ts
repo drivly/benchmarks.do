@@ -2,14 +2,14 @@ import { evalite } from 'evalite'
 import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
 import { models } from '../models'
-import * as fs from 'fs'
-import * as path from 'path'
+import { readFileSync } from 'node:fs'
+import { join } from 'node:path'
 
 const battleScorer = Battle as any
 
 const readContractFile = (filename: string) => {
-  const filePath = path.join(__dirname, '../datasets/contracts', filename)
-  return fs.readFileSync(filePath, 'utf8')
+  const filePath = join(__dirname, '../datasets/contracts', filename)
+  return readFileSync(filePath, 'utf8')
 }
 
 const contracts = [
