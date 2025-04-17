@@ -13,6 +13,19 @@ This repository houses benchmarks for AI functions focused on business use cases
 - **Customer Service**: Support ticket handling, inquiry response generation
 - **Content**: Marketing copy, ad text, and blog post generation
 
+## Document Benchmark Datasets
+
+This section outlines the document datasets planned for use in our benchmark suite. We aim to expand our benchmarks to include PDF documents and other formats to create a more comprehensive evaluation of AI functions across different document types.
+
+| Category | Document Type | Format | Source Type | Source | Status |
+|----------|--------------|--------|-------------|--------|--------|
+| Backoffice | W2 Tax Forms | JPG | Synthetic | Internal | Implemented |
+| Backoffice | Invoices | PDF | Public | [TBD] | Planned |
+| Backoffice | Receipts | PDF | Synthetic | [TBD] | Planned |
+| Contracts | NDAs | Text | Synthetic | Internal | Implemented |
+| Contracts | Service Agreements | PDF | Public | [TBD] | Planned |
+| Content | Marketing Copy | MD | Public | [TBD] | Planned |
+
 ## Usage
 
 ```typescript
