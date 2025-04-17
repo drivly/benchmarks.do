@@ -1,0 +1,13 @@
+{
+  "name": "benchmarks.do",
+  "version": "0.1.0",
+  "dependencies": {
+    "autoevals": "^0.0.127",
+    "evalite": "^0.10.0",
+    "evals.do": "latest",
+    "functions.do": "^0.0.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
