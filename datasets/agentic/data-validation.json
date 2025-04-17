@@ -1,0 +1,93 @@
+[
+  {
+    "id": "AGENT-2025-004",
+    "scenario": "Data Validation Workflow",
+    "context": "Validate customer data records, identify discrepancies, and correct or flag issues",
+    "expected_tools": ["extractCustomerData", "validateEmailAddress", "validatePhoneNumber", "validateAddress", "updateCustomerRecord", "flagForReview"],
+    "documents": {
+      "customer_record": {
+        "id": "CUST-1234",
+        "name": "Michael Johnson",
+        "email": "mjohnson@eample.com",
+        "phone": "555-123-45678",
+        "address": "456 Oak St, Apt 3B, Chicago, IL 6062"
+      }
+    },
+    "expected_steps": [
+      {
+        "tool": "extractCustomerData",
+        "expected_parameters": {
+          "customer_id": "CUST-1234"
+        }
+      },
+      {
+        "tool": "validateEmailAddress",
+        "expected_parameters": {
+          "email": "mjohnson@eample.com"
+        }
+      },
+      {
+        "tool": "validatePhoneNumber",
+        "expected_parameters": {
+          "phone": "555-123-45678"
+        }
+      },
+      {
+        "tool": "validateAddress",
+        "expected_parameters": {
+          "address": "456 Oak St, Apt 3B, Chicago, IL 6062"
+        }
+      },
+      {
+        "conditional_branch": [
+          {
+            "condition": "email_validation_failed",
+            "tools": [
+              {
+                "tool": "flagForReview",
+                "expected_parameters": {
+                  "customer_id": "CUST-1234",
+                  "issue": "Invalid email address",
+                  "suggested_correction": "mjohnson@example.com"
+                }
+              }
+            ]
+          },
+          {
+            "condition": "phone_validation_failed",
+            "tools": [
+              {
+                "tool": "updateCustomerRecord",
+                "expected_parameters": {
+                  "customer_id": "CUST-1234",
+                  "field": "phone",
+                  "value": "555-123-4567"
+                }
+              }
+            ]
+          },
+          {
+            "condition": "address_validation_failed",
+            "tools": [
+              {
+                "tool": "updateCustomerRecord",
+                "expected_parameters": {
+                  "customer_id": "CUST-1234",
+                  "field": "address",
+                  "value": "456 Oak St, Apt 3B, Chicago, IL 60620"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "success_criteria": {
+      "correct_tool_selection": true,
+      "parameter_accuracy": 0.8,
+      "decision_quality": 0.9,
+      "completion_success": true
+    },
+    "complexity": "Conditional"
+  }
+]

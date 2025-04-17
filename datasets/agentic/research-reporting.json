@@ -1,0 +1,56 @@
+[
+  {
+    "id": "AGENT-2025-006",
+    "scenario": "Market Research and Report Generation",
+    "context": "Research competitor pricing data, analyze market trends, and generate a summary report",
+    "expected_tools": ["searchCompetitorData", "analyzePricingTrends", "generateMarketInsights", "createPricingReport"],
+    "documents": {
+      "research_request": {
+        "product_category": "Smart Home Devices",
+        "competitors": ["SmartLife", "HomeTech", "ConnectAll"],
+        "timeframe": "Last 3 months",
+        "focus_areas": ["Pricing strategy", "Feature comparison", "Market share"]
+      }
+    },
+    "expected_steps": [
+      {
+        "tool": "searchCompetitorData",
+        "expected_parameters": {
+          "competitors": ["SmartLife", "HomeTech", "ConnectAll"],
+          "product_category": "Smart Home Devices",
+          "timeframe": "Last 3 months"
+        }
+      },
+      {
+        "tool": "analyzePricingTrends",
+        "expected_parameters": {
+          "product_category": "Smart Home Devices",
+          "timeframe": "Last 3 months",
+          "comparison_basis": "Feature parity"
+        }
+      },
+      {
+        "tool": "generateMarketInsights",
+        "expected_parameters": {
+          "product_category": "Smart Home Devices",
+          "focus_areas": ["Pricing strategy", "Feature comparison", "Market share"],
+          "data_sources": ["competitor_data", "pricing_analysis"]
+        }
+      },
+      {
+        "tool": "createPricingReport",
+        "expected_parameters": {
+          "title": "Smart Home Devices Market Analysis",
+          "sections": ["Executive Summary", "Competitor Analysis", "Pricing Trends", "Recommendations"],
+          "format": "PDF"
+        }
+      }
+    ],
+    "success_criteria": {
+      "correct_tool_selection": true,
+      "parameter_accuracy": 0.85,
+      "completion_success": true
+    },
+    "complexity": "Sequential"
+  }
+]
