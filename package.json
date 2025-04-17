@@ -11,5 +11,12 @@
   "devDependencies": {
     "@types/node": "^22.14.1",
     "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "benchmark": "ts-node-esm index.ts",
+    "benchmark:information-extraction": "ts-node-esm benchmarks/information-extraction/index.ts",
+    "benchmark:decision-classification": "ts-node-esm benchmarks/decision-classification/index.ts",
+    "benchmark:text-classification": "ts-node-esm benchmarks/text-classification/index.ts",
+    "benchmark:agentic-tool-use": "ts-node-esm benchmarks/agentic-tool-use/index.ts"
   }
 }
