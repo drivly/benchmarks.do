@@ -2,6 +2,7 @@ import './benchmarks/backoffice.eval'
 import './benchmarks/contracts.eval'
 import './benchmarks/customer-service.eval'
 import './benchmarks/content.eval'
+import './benchmarks/workflow-decisions.eval'
 
 import './benchmarks/information-extraction'
 
