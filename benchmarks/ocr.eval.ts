@@ -41,15 +41,6 @@ const expected = JSON.stringify({
   taxYear: '2024',
 })
 
-// const messages = [
-//   {
-//     role: 'user',
-//     content: [
-//       { type: 'text', text: 'Describe the image in detail.' },
-//       { type: 'image', image: 'https://github.com/vercel/ai/blob/main/examples/ai-core/data/comic-cat.png?raw=true' },
-//     ],
-//   },
-// ]
 
 const images = [1,2,3,4,5]
 const blur = [0,1,2,3]
@@ -58,7 +49,6 @@ const resolution = [512, 768, 1536, 2000, 3072]
 for (const model of models) {
   evalite('W2 OCR - ' + model, {
     data: async () => {
-      // Generate all permutations of image numbers, blur values, and resolutions
       const permutations = [];
       for (const img of images) {
         for (const b of blur) {
