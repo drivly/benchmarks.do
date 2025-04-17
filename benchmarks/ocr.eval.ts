@@ -9,6 +9,9 @@ import { z } from 'zod'
 
 // console.log(process.env.AI_GATEWAY_URL)
 
+// replace router with:
+// 1. `ai-providers` - the aggregated AI SDK router w/ OpenAI, Google, Anthropic, & LLM.do providers (that uses `language-models` and parses the context to the correct provider & model)
+// 2. `llm.do` - the NPM package of the AI SDK provider for the LLM.do API w/ managed tool use, memory, storage, session, etc
 const router = createOpenAI({
   apiKey: process.env.AI_GATEWAY_TOKEN!,
   baseURL: process.env.AI_GATEWAY_URL!,
