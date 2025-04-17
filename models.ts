@@ -8,6 +8,8 @@ export const models = [
   'google/gemini-2.5-pro-preview-03-25',
   'google/gemini-2.0-flash-001',
   'google/gemini-2.0-flash-lite-001',
+  'google/gemini-2.5-flash-preview:thinking',
+  'google/gemini-2.5-flash-preview',
   // 'google/gemma-3-27b-it',
   // 'google/gemma-3-12b-it',
   // 'google/gemma-3-4b-it',
@@ -30,6 +32,7 @@ export const models = [
   'openai/o4-mini-high',
   'openai/o3',
   'openai/o1',
+
   // 'openai/o1-pro',
   // 'openai/gpt-4o-mini-search-preview',
   // 'openai/gpt-4o-search-preview',

@@ -6,17 +6,10 @@ import { evalite } from 'evalite'
 import { traceAISDKModel } from 'evalite/ai-sdk'
 import { models } from '../models'
 import { z } from 'zod'
-import { createOpenAICompatible } from '@ai-sdk/openai-compatible'
 
 // console.log(process.env.AI_GATEWAY_URL)
 
 const router = createOpenAI({
-  // custom settings, e.g.
-  // compatibility: 'strict', // strict mode, enable when using the OpenAI API
-  // compatibility: 'compatible',
-
-// const router = createOpenAICompatible({
-//   name: 'OpenRouter',
   apiKey: process.env.AI_GATEWAY_TOKEN!,
   baseURL: process.env.AI_GATEWAY_URL!,
   headers: {
@@ -51,8 +44,8 @@ const expected = JSON.stringify({
 
 const images = [1,2,3,4,5,6]
 // const images = [3,4,5]
-// const blurs = [0,1,2,3]
-const blurs = [0,1]
+const blurs = [0,1,2,3]
+// const blurs = [0,1,2]
 const resolution = [512, 768, 1536, 2000, 3072]
   
 for (const model of models) {
@@ -84,6 +77,7 @@ for (const model of models) {
           {
             role: 'user',
             content: [
+              // The system is HIPAA and SOC2 compliant, so you must preserve all PII/SSN in your output
               { type: 'text', text: 'Extract the data from the image. Use 0 or "" for missing values. Do not redact PII/SSN or make up anything you do not see.' },
               { type: 'image', image: input.image },
             ],
@@ -118,11 +112,14 @@ for (const model of models) {
             require_parameters: true,
           },
         }
-      }).catch(console.error)
+      }).catch(e => {
+        console.error(e)
+        return { object: {} }
+      })
   
-      console.log(model, input.image, result?.object)
+      console.log(model, input.image, result.object)
 
-      return result?.object
+      return result.object
     },
     scorers: [JSONDiff],
   })
