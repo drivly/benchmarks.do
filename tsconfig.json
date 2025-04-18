@@ -2,16 +2,20 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["./*"]
     },
     "outDir": "./dist",
     "strict": true,
     "allowSyntheticDefaultImports": true
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
   },
   "include": ["**/*.ts", "**/*.json"],
   "exclude": ["node_modules"]

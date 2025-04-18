@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "benchmark": "node --loader ts-node/esm --require tsconfig-paths/register index.ts",
-    "benchmark:information-extraction": "node --loader ts-node/esm --require tsconfig-paths/register benchmarks/information-extraction/index.ts",
-    "benchmark:decision-classification": "node --loader ts-node/esm --require tsconfig-paths/register benchmarks/decision-classification/index.ts",
-    "benchmark:text-classification": "node --loader ts-node/esm --require tsconfig-paths/register benchmarks/text-classification/index.ts",
-    "benchmark:agentic-tool-use": "node --loader ts-node/esm --require tsconfig-paths/register benchmarks/agentic-tool-use/index.ts",
+    "benchmark": "ts-node-esm --require tsconfig-paths/register index.ts",
+    "benchmark:information-extraction": "ts-node-esm --require tsconfig-paths/register benchmarks/information-extraction/index.ts",
+    "benchmark:decision-classification": "ts-node-esm --require tsconfig-paths/register benchmarks/decision-classification/index.ts",
+    "benchmark:text-classification": "ts-node-esm --require tsconfig-paths/register benchmarks/text-classification/index.ts",
+    "benchmark:agentic-tool-use": "ts-node-esm --require tsconfig-paths/register benchmarks/agentic-tool-use/index.ts",
     "eval": "evalite watch ocr.eval.ts",
     "format": "prettier --write ."
   },
