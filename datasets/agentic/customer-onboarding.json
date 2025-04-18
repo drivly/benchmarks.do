@@ -1,0 +1,64 @@
+[
+  {
+    "id": "AGENT-2025-003",
+    "scenario": "Customer Onboarding Workflow",
+    "context": "Process a new customer application by validating their information, creating an account, and sending welcome materials",
+    "expected_tools": ["validateCustomerInfo", "createCustomerAccount", "assignCustomerTier", "sendWelcomePackage"],
+    "documents": {
+      "application": {
+        "customer_name": "Jennifer Wilson",
+        "email": "jennifer.wilson@example.com",
+        "phone": "555-867-5309",
+        "address": "789 Maple Drive, Boston, MA 02108",
+        "company": "Wilson Consulting LLC",
+        "industry": "Professional Services",
+        "annual_revenue": "$2.5M",
+        "employees": 15,
+        "referral_source": "Industry Conference"
+      }
+    },
+    "expected_steps": [
+      {
+        "tool": "validateCustomerInfo",
+        "expected_parameters": {
+          "name": "Jennifer Wilson",
+          "email": "jennifer.wilson@example.com",
+          "company": "Wilson Consulting LLC"
+        }
+      },
+      {
+        "tool": "createCustomerAccount",
+        "expected_parameters": {
+          "name": "Jennifer Wilson",
+          "email": "jennifer.wilson@example.com",
+          "phone": "555-867-5309",
+          "company": "Wilson Consulting LLC",
+          "address": "789 Maple Drive, Boston, MA 02108"
+        }
+      },
+      {
+        "tool": "assignCustomerTier",
+        "expected_parameters": {
+          "account_id": "generated_during_execution",
+          "annual_revenue": "$2.5M",
+          "industry": "Professional Services",
+          "employees": 15
+        }
+      },
+      {
+        "tool": "sendWelcomePackage",
+        "expected_parameters": {
+          "account_id": "generated_during_execution",
+          "tier": "generated_during_execution",
+          "delivery_method": "Email"
+        }
+      }
+    ],
+    "success_criteria": {
+      "correct_tool_selection": true,
+      "parameter_accuracy": 0.85,
+      "completion_success": true
+    },
+    "complexity": "Sequential"
+  }
+]

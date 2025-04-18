@@ -1,0 +1,83 @@
+[
+  {
+    "id": "AGENT-2025-005",
+    "scenario": "Customer Service Issue Resolution",
+    "context": "Handle a customer complaint about a delayed shipment, check order status, offer resolution options",
+    "expected_tools": ["retrieveCustomerInfo", "checkOrderStatus", "offerCompensationOptions", "expediteShipment", "issueRefund", "scheduleFollowUp"],
+    "documents": {
+      "customer_inquiry": {
+        "customer_id": "C-5678",
+        "order_number": "ORD-98765",
+        "issue": "My order was supposed to arrive yesterday, but tracking shows it's still in the warehouse. I need these items for an important event this weekend.",
+        "sentiment": "frustrated",
+        "priority": "high"
+      }
+    },
+    "expected_steps": [
+      {
+        "tool": "retrieveCustomerInfo",
+        "expected_parameters": {
+          "customer_id": "C-5678"
+        }
+      },
+      {
+        "tool": "checkOrderStatus",
+        "expected_parameters": {
+          "order_number": "ORD-98765"
+        }
+      },
+      {
+        "conditional_branch": [
+          {
+            "condition": "shipment_delayed_significantly",
+            "tools": [
+              {
+                "tool": "offerCompensationOptions",
+                "expected_parameters": {
+                  "customer_id": "C-5678",
+                  "order_number": "ORD-98765",
+                  "issue_type": "shipment_delay"
+                }
+              },
+              {
+                "tool": "expediteShipment",
+                "expected_parameters": {
+                  "order_number": "ORD-98765",
+                  "priority_level": "urgent"
+                }
+              }
+            ]
+          },
+          {
+            "condition": "cannot_deliver_by_weekend",
+            "tools": [
+              {
+                "tool": "issueRefund",
+                "expected_parameters": {
+                  "order_number": "ORD-98765",
+                  "refund_type": "full",
+                  "reason": "Cannot deliver by customer's needed date"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tool": "scheduleFollowUp",
+        "expected_parameters": {
+          "customer_id": "C-5678",
+          "follow_up_type": "confirmation",
+          "timing": "after_resolution"
+        }
+      }
+    ],
+    "success_criteria": {
+      "correct_tool_selection": true,
+      "parameter_accuracy": 0.85,
+      "decision_quality": 0.9,
+      "completion_success": true
+    },
+    "complexity": "Conditional"
+  }
+]
