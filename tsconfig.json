@@ -1,10 +1,18 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "module": "ESNext",
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
     "outDir": "./dist",
     "strict": true,
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "include": ["**/*.ts", "**/*.json"],
+  "exclude": ["node_modules"]
 }
