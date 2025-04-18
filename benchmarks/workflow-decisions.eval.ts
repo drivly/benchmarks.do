@@ -1,9 +1,9 @@
 import { evalite } from 'evalite'
 import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
-import { models } from '../models'
+import { models } from '@/models'
 
-import workflowScenarios from '../datasets/workflow-decisions/index'
+import workflowScenarios from '@/datasets/workflow-decisions/index'
 
 const battleScorer = Battle as any
 

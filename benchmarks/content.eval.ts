@@ -1,7 +1,7 @@
 import { evalite } from 'evalite'
 import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
-import { models } from '../models'
+import { models } from '@/models'
 
 import marketingPrompts from '../datasets/content/marketing_prompts.json'
 

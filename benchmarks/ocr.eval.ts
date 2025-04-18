@@ -4,7 +4,7 @@ import { generateObject } from 'ai'
 import { JSONDiff } from 'autoevals'
 import { evalite } from 'evalite'
 import { traceAISDKModel } from 'evalite/ai-sdk'
-import { models } from '../models'
+import { models } from '@/models'
 import { z } from 'zod'
 
 // console.log(process.env.AI_GATEWAY_URL)
