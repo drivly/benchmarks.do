@@ -1,0 +1,325 @@
+[
+  {
+    "id": "TECH-2025-001",
+    "title": "API Reference Guide",
+    "version": "v2.3.0",
+    "type": "API Documentation",
+    "content": {
+      "overview": "This document provides comprehensive documentation for the PaymentProcessor API, which enables secure payment processing for e-commerce applications.",
+      "authentication": {
+        "method": "OAuth 2.0",
+        "tokenEndpoint": "https://api.paymentprocessor.com/oauth/token",
+        "scopes": ["payments.read", "payments.write", "refunds.write"]
+      },
+      "baseUrl": "https://api.paymentprocessor.com/v2",
+      "endpoints": [
+        {
+          "path": "/payments",
+          "method": "POST",
+          "description": "Create a new payment transaction",
+          "requestBody": {
+            "type": "application/json",
+            "schema": {
+              "amount": "number (required) - Amount in cents",
+              "currency": "string (required) - Three-letter ISO currency code",
+              "paymentMethod": "object (required) - Payment method details",
+              "description": "string (optional) - Description of the payment"
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Payment created successfully",
+              "schema": {
+                "id": "string - Unique payment identifier",
+                "status": "string - Payment status (pending, completed, failed)",
+                "amount": "number - Amount in cents",
+                "currency": "string - Three-letter ISO currency code",
+                "createdAt": "string - ISO timestamp"
+              }
+            },
+            "400": {
+              "description": "Invalid request parameters"
+            },
+            "401": {
+              "description": "Authentication failed"
+            }
+          }
+        },
+        {
+          "path": "/payments/{paymentId}",
+          "method": "GET",
+          "description": "Retrieve details of a specific payment",
+          "pathParameters": {
+            "paymentId": "string (required) - Unique payment identifier"
+          },
+          "responses": {
+            "200": {
+              "description": "Payment details retrieved successfully",
+              "schema": {
+                "id": "string - Unique payment identifier",
+                "status": "string - Payment status",
+                "amount": "number - Amount in cents",
+                "currency": "string - Three-letter ISO currency code",
+                "paymentMethod": "object - Payment method details",
+                "description": "string - Description of the payment",
+                "createdAt": "string - ISO timestamp"
+              }
+            },
+            "404": {
+              "description": "Payment not found"
+            }
+          }
+        },
+        {
+          "path": "/refunds",
+          "method": "POST",
+          "description": "Create a refund for a payment",
+          "requestBody": {
+            "type": "application/json",
+            "schema": {
+              "paymentId": "string (required) - ID of the payment to refund",
+              "amount": "number (optional) - Amount to refund in cents, defaults to full payment amount",
+              "reason": "string (optional) - Reason for the refund"
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Refund created successfully",
+              "schema": {
+                "id": "string - Unique refund identifier",
+                "paymentId": "string - ID of the refunded payment",
+                "amount": "number - Amount refunded in cents",
+                "status": "string - Refund status",
+                "createdAt": "string - ISO timestamp"
+              }
+            },
+            "400": {
+              "description": "Invalid request parameters"
+            },
+            "404": {
+              "description": "Payment not found"
+            }
+          }
+        }
+      ],
+      "errorCodes": [
+        {
+          "code": "payment_failed",
+          "description": "The payment could not be processed due to payment method issues"
+        },
+        {
+          "code": "insufficient_funds",
+          "description": "The payment method has insufficient funds"
+        },
+        {
+          "code": "invalid_card",
+          "description": "The card information is invalid or expired"
+        }
+      ],
+      "rateLimit": {
+        "requestsPerMinute": 100,
+        "burstLimit": 150
+      }
+    }
+  },
+  {
+    "id": "TECH-2025-002",
+    "title": "System Architecture Overview",
+    "version": "v1.5.0",
+    "type": "Architecture Documentation",
+    "content": {
+      "overview": "This document describes the high-level architecture of the CloudScale platform, a distributed system for managing cloud infrastructure resources.",
+      "components": [
+        {
+          "name": "Resource Manager",
+          "description": "Core component responsible for provisioning and managing cloud resources",
+          "subcomponents": [
+            "Resource Scheduler",
+            "Quota Manager",
+            "State Tracker"
+          ],
+          "technologies": [
+            "Go",
+            "PostgreSQL",
+            "Redis"
+          ]
+        },
+        {
+          "name": "Authentication Service",
+          "description": "Handles user authentication and authorization",
+          "subcomponents": [
+            "Identity Provider",
+            "Token Service",
+            "Permission Manager"
+          ],
+          "technologies": [
+            "Node.js",
+            "MongoDB",
+            "JWT"
+          ]
+        },
+        {
+          "name": "Monitoring System",
+          "description": "Collects and analyzes metrics from all platform components",
+          "subcomponents": [
+            "Metric Collector",
+            "Alert Manager",
+            "Visualization Engine"
+          ],
+          "technologies": [
+            "Python",
+            "Prometheus",
+            "Grafana"
+          ]
+        }
+      ],
+      "dataFlow": [
+        {
+          "source": "Client Application",
+          "destination": "API Gateway",
+          "protocol": "HTTPS",
+          "description": "Client requests are sent to the API Gateway"
+        },
+        {
+          "source": "API Gateway",
+          "destination": "Authentication Service",
+          "protocol": "gRPC",
+          "description": "Requests are authenticated before processing"
+        },
+        {
+          "source": "API Gateway",
+          "destination": "Resource Manager",
+          "protocol": "gRPC",
+          "description": "Authenticated requests for resource operations"
+        },
+        {
+          "source": "Resource Manager",
+          "destination": "Cloud Provider APIs",
+          "protocol": "HTTPS",
+          "description": "Resource operations are executed on cloud providers"
+        }
+      ],
+      "deploymentModel": {
+        "infrastructure": "Kubernetes",
+        "regions": ["us-east", "us-west", "eu-central", "ap-southeast"],
+        "highAvailability": {
+          "strategy": "Multi-zone deployment with automatic failover",
+          "recoveryTimeObjective": "< 5 minutes",
+          "recoveryPointObjective": "< 30 seconds"
+        }
+      },
+      "securityConsiderations": [
+        "All inter-service communication is encrypted using TLS",
+        "Secrets are managed using HashiCorp Vault",
+        "Regular security audits and penetration testing",
+        "Role-based access control for all operations"
+      ]
+    }
+  },
+  {
+    "id": "TECH-2025-003",
+    "title": "Developer Guide: Mobile SDK Integration",
+    "version": "v3.1.2",
+    "type": "Integration Guide",
+    "content": {
+      "overview": "This guide provides step-by-step instructions for integrating the AnalyticsTracker SDK into iOS and Android mobile applications.",
+      "prerequisites": [
+        "iOS: Xcode 14+ and iOS 14.0+ target",
+        "Android: Android Studio Arctic Fox+ and minSdkVersion 21+",
+        "Valid API key from the AnalyticsTracker Dashboard"
+      ],
+      "installation": {
+        "ios": {
+          "cocoapods": "pod 'AnalyticsTracker', '~> 3.1'",
+          "swift_package_manager": "https://github.com/analyticstracker/ios-sdk.git",
+          "manual": "Download the framework from the developer portal and add it to your project"
+        },
+        "android": {
+          "gradle": "implementation 'com.analyticstracker:sdk:3.1.2'",
+          "maven": "<dependency>\n  <groupId>com.analyticstracker</groupId>\n  <artifactId>sdk</artifactId>\n  <version>3.1.2</version>\n</dependency>",
+          "manual": "Download the AAR from the developer portal and add it to your project"
+        }
+      },
+      "initialization": {
+        "ios": "import AnalyticsTracker\n\n// In your AppDelegate\nfunc application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {\n    AnalyticsTracker.initialize(apiKey: \"YOUR_API_KEY\")\n    return true\n}",
+        "android": "import com.analyticstracker.sdk.AnalyticsTracker;\n\n// In your Application class\n@Override\npublic void onCreate() {\n    super.onCreate();\n    AnalyticsTracker.initialize(this, \"YOUR_API_KEY\");\n}"
+      },
+      "trackingEvents": {
+        "description": "Events represent user actions or application states that you want to track",
+        "methods": [
+          {
+            "name": "trackEvent",
+            "parameters": [
+              "eventName (required) - Name of the event",
+              "properties (optional) - Dictionary of event properties"
+            ],
+            "example": {
+              "ios": "AnalyticsTracker.trackEvent(\"button_clicked\", properties: [\"button_id\": \"login_button\", \"screen\": \"login\"])",
+              "android": "AnalyticsTracker.trackEvent(\"button_clicked\", new HashMap<String, Object>() {{\n    put(\"button_id\", \"login_button\");\n    put(\"screen\", \"login\");\n}});"
+            }
+          },
+          {
+            "name": "trackScreenView",
+            "parameters": [
+              "screenName (required) - Name of the screen",
+              "properties (optional) - Dictionary of screen properties"
+            ],
+            "example": {
+              "ios": "AnalyticsTracker.trackScreenView(\"product_details\", properties: [\"product_id\": \"12345\"])",
+              "android": "AnalyticsTracker.trackScreenView(\"product_details\", new HashMap<String, Object>() {{\n    put(\"product_id\", \"12345\");\n}});"
+            }
+          }
+        ]
+      },
+      "userIdentification": {
+        "description": "Identify users to associate events with specific user profiles",
+        "methods": [
+          {
+            "name": "identifyUser",
+            "parameters": [
+              "userId (required) - Unique identifier for the user",
+              "traits (optional) - Dictionary of user traits"
+            ],
+            "example": {
+              "ios": "AnalyticsTracker.identifyUser(\"user_123\", traits: [\"email\": \"user@example.com\", \"plan\": \"premium\"])",
+              "android": "AnalyticsTracker.identifyUser(\"user_123\", new HashMap<String, Object>() {{\n    put(\"email\", \"user@example.com\");\n    put(\"plan\", \"premium\");\n}});"
+            }
+          }
+        ]
+      },
+      "advancedConfiguration": {
+        "description": "Additional configuration options for customizing SDK behavior",
+        "options": [
+          {
+            "name": "setFlushInterval",
+            "description": "Set the interval in seconds at which events are sent to the server",
+            "default": 30,
+            "example": {
+              "ios": "AnalyticsTracker.setFlushInterval(60)",
+              "android": "AnalyticsTracker.setFlushInterval(60);"
+            }
+          },
+          {
+            "name": "setMaxQueueSize",
+            "description": "Set the maximum number of events to queue before forcing a flush",
+            "default": 100,
+            "example": {
+              "ios": "AnalyticsTracker.setMaxQueueSize(50)",
+              "android": "AnalyticsTracker.setMaxQueueSize(50);"
+            }
+          }
+        ]
+      },
+      "troubleshooting": [
+        {
+          "issue": "Events not appearing in dashboard",
+          "solution": "Check that your API key is correct and that the device has internet connectivity. Enable debug logging to see detailed information."
+        },
+        {
+          "issue": "High battery consumption",
+          "solution": "Increase the flush interval to reduce network activity. Consider batching events instead of sending them individually."
+        }
+      ]
+    }
+  }
+]

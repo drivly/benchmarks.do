@@ -1,0 +1,52 @@
+SOFTWARE LICENSE AGREEMENT
+
+This Software License Agreement (the "Agreement") is entered into as of [DATE] by and between:
+
+LICENSOR: [LICENSOR NAME], a corporation organized under the laws of [STATE/COUNTRY], with its principal place of business at [ADDRESS] ("Licensor")
+
+and
+
+LICENSEE: [LICENSEE NAME], a corporation organized under the laws of [STATE/COUNTRY], with its principal place of business at [ADDRESS] ("Licensee").
+
+1. LICENSE GRANT
+Licensor hereby grants to Licensee a non-exclusive, non-transferable license to use the software product identified as [SOFTWARE NAME] (the "Software") for Licensee's internal business purposes.
+
+2. RESTRICTIONS
+Licensee shall not: (a) copy the Software, except as expressly permitted by this Agreement; (b) modify, translate, adapt, or create derivative works based on the Software; (c) rent, lease, loan, sell, distribute, sublicense, or otherwise transfer the Software to any third party; (d) reverse engineer, decompile, or disassemble the Software; or (e) remove, alter, or obscure any proprietary notices on the Software.
+
+3. TERM
+This Agreement shall remain in effect for a period of [TERM] from the Effective Date, unless terminated earlier in accordance with the provisions of this Agreement.
+
+4. FEES
+Licensee shall pay to Licensor the license fees as set forth in Schedule A attached hereto.
+
+5. WARRANTIES
+Licensor warrants that the Software will perform substantially in accordance with the documentation provided by Licensor for a period of [WARRANTY PERIOD] from the Effective Date.
+
+6. LIMITATION OF LIABILITY
+IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY INDIRECT, SPECIAL, INCIDENTAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT OR THE SOFTWARE.
+
+7. INTELLECTUAL PROPERTY
+Licensor retains all right, title, and interest in and to the Software and all intellectual property rights therein.
+
+8. TERMINATION
+This Agreement may be terminated by either party upon written notice to the other party in the event of a material breach of this Agreement.
+
+9. GOVERNING LAW
+This Agreement shall be governed by and construed in accordance with the laws of [STATE/COUNTRY].
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the date first above written.
+
+LICENSOR
+By: ____________________________
+Name: _________________________
+Title: __________________________
+
+LICENSEE
+By: ____________________________
+Name: _________________________
+Title: __________________________
+
+SCHEDULE A
+LICENSE FEES
+[LICENSE FEE DETAILS]
