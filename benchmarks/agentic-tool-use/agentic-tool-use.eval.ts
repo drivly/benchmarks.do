@@ -1,7 +1,7 @@
 import { evalite } from 'evalite'
 import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
-import { models } from '../../models.js'
+import { models } from '../../models'
 
 import invoiceProcessing from '../../datasets/agentic/invoice-processing.json'
 import customerOnboarding from '../../datasets/agentic/customer-onboarding.json'
