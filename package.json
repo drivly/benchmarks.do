@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "benchmark": "ts-node-esm index.ts",
-    "benchmark:information-extraction": "ts-node-esm benchmarks/information-extraction/index.ts",
-    "benchmark:decision-classification": "ts-node-esm benchmarks/decision-classification/index.ts",
-    "benchmark:text-classification": "ts-node-esm benchmarks/text-classification/index.ts",
-    "benchmark:agentic-tool-use": "ts-node-esm benchmarks/agentic-tool-use/index.ts",
+    "benchmark": "tsx index.ts",
+    "benchmark:information-extraction": "tsx benchmarks/information-extraction/index.ts",
+    "benchmark:decision-classification": "tsx benchmarks/decision-classification/index.ts",
+    "benchmark:text-classification": "tsx benchmarks/text-classification/index.ts",
+    "benchmark:agentic-tool-use": "tsx benchmarks/agentic-tool-use/index.ts",
     "eval": "evalite watch ocr.eval.ts",
     "format": "prettier --write ."
   },
@@ -26,6 +26,9 @@
     "@types/node": "^22.14.1",
     "dotenv": "^16.5.0",
     "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.19.3",
     "typescript": "^5.0.0",
     "zod": "^3.24.3"
   },

@@ -1,9 +1,9 @@
 import { evalite } from 'evalite'
 import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
-import { models } from '../models'
+import { models } from '@/models'
 
-import realEstateDocuments from '../datasets/real-estate-documents/real-estate-documents.json'
+import realEstateDocuments from '@/datasets/real-estate-documents/real-estate-documents.json'
 
 const battleScorer = Battle as any
 
