@@ -1,0 +1,136 @@
+[
+  {
+    "id": "AGENT-2025-001",
+    "scenario": "Invoice Processing Workflow",
+    "context": "Process an invoice by extracting data, validating against records, and initiating payment",
+    "expected_tools": ["extractInvoiceData", "validateVendor", "initiatePayment"],
+    "documents": {
+      "invoice": {
+        "id": "INV-2025-001",
+        "vendor": "Office Supplies Co.",
+        "date": "2025-03-15",
+        "dueDate": "2025-04-15",
+        "customer": {
+          "name": "Acme Corporation",
+          "address": "123 Business Ave, Suite 100, San Francisco, CA 94107",
+          "email": "accounts@acmecorp.com"
+        },
+        "items": [
+          {
+            "description": "Premium Paper (500 sheets)",
+            "quantity": 10,
+            "unitPrice": 12.99,
+            "total": 129.90
+          },
+          {
+            "description": "Ink Cartridges (Black)",
+            "quantity": 5,
+            "unitPrice": 24.50,
+            "total": 122.50
+          }
+        ],
+        "subtotal": 252.40,
+        "tax": 20.19,
+        "total": 272.59,
+        "paymentTerms": "Net 30"
+      }
+    },
+    "expected_steps": [
+      {
+        "tool": "extractInvoiceData",
+        "expected_parameters": {
+          "invoice_id": "INV-2025-001",
+          "vendor_name": "Office Supplies Co.",
+          "total_amount": 272.59,
+          "due_date": "2025-04-15"
+        }
+      },
+      {
+        "tool": "validateVendor",
+        "expected_parameters": {
+          "vendor_name": "Office Supplies Co.",
+          "vendor_id": "VS-001"
+        }
+      },
+      {
+        "tool": "initiatePayment",
+        "expected_parameters": {
+          "invoice_id": "INV-2025-001",
+          "amount": 272.59,
+          "vendor_id": "VS-001",
+          "payment_method": "ACH"
+        }
+      }
+    ],
+    "success_criteria": {
+      "correct_tool_selection": true,
+      "parameter_accuracy": 0.9,
+      "completion_success": true
+    },
+    "complexity": "Sequential"
+  },
+  {
+    "id": "AGENT-2025-002",
+    "scenario": "Invoice Processing with Missing Information",
+    "context": "Process an invoice with missing vendor information, requiring additional vendor lookup before proceeding",
+    "expected_tools": ["extractInvoiceData", "lookupVendorInfo", "validateVendor", "initiatePayment"],
+    "documents": {
+      "invoice": {
+        "id": "INV-2025-002",
+        "vendor": "Tech Solutions",
+        "date": "2025-03-20",
+        "dueDate": "2025-04-20",
+        "items": [
+          {
+            "description": "Server Maintenance",
+            "quantity": 1,
+            "unitPrice": 1500.00,
+            "total": 1500.00
+          }
+        ],
+        "subtotal": 1500.00,
+        "tax": 120.00,
+        "total": 1620.00
+      }
+    },
+    "expected_steps": [
+      {
+        "tool": "extractInvoiceData",
+        "expected_parameters": {
+          "invoice_id": "INV-2025-002",
+          "vendor_name": "Tech Solutions",
+          "total_amount": 1620.00,
+          "due_date": "2025-04-20"
+        }
+      },
+      {
+        "tool": "lookupVendorInfo",
+        "expected_parameters": {
+          "partial_name": "Tech Solutions"
+        }
+      },
+      {
+        "tool": "validateVendor",
+        "expected_parameters": {
+          "vendor_name": "Tech Solutions Inc.",
+          "vendor_id": "VS-002"
+        }
+      },
+      {
+        "tool": "initiatePayment",
+        "expected_parameters": {
+          "invoice_id": "INV-2025-002",
+          "amount": 1620.00,
+          "vendor_id": "VS-002",
+          "payment_method": "Wire"
+        }
+      }
+    ],
+    "success_criteria": {
+      "correct_tool_selection": true,
+      "parameter_accuracy": 0.85,
+      "completion_success": true
+    },
+    "complexity": "Conditional"
+  }
+]
