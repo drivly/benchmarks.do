@@ -1,0 +1,393 @@
+[
+  {
+    "id": "PROD-2025-001",
+    "productName": "TechPro X5 Laptop",
+    "manufacturer": "TechCorp Industries",
+    "category": "Electronics",
+    "type": "Technical Specification",
+    "content": {
+      "generalSpecifications": {
+        "modelNumber": "TP-X5-2025",
+        "releaseDate": "January 2025",
+        "dimensions": "12.8 x 8.9 x 0.6 inches (325 x 226 x 15.2 mm)",
+        "weight": "3.1 lbs (1.4 kg)",
+        "colors": ["Midnight Black", "Silver Gray", "Navy Blue"],
+        "warranty": "2-year limited hardware warranty",
+        "certifications": ["Energy Star 8.0", "EPEAT Gold", "TCO Certified"]
+      },
+      "performanceSpecifications": {
+        "processor": {
+          "brand": "Intel",
+          "model": "Core i7-13700H",
+          "cores": "14 cores (6 performance, 8 efficiency)",
+          "baseFrequency": "2.4 GHz",
+          "turboFrequency": "Up to 5.0 GHz",
+          "cache": "24 MB Intel Smart Cache"
+        },
+        "memory": {
+          "type": "LPDDR5",
+          "speed": "6400 MHz",
+          "capacity": "16 GB (soldered)",
+          "expandable": false
+        },
+        "storage": {
+          "type": "PCIe Gen4 NVMe SSD",
+          "capacity": "512 GB",
+          "expandable": true,
+          "maxCapacity": "2 TB"
+        },
+        "graphics": {
+          "integrated": "Intel Iris Xe Graphics",
+          "dedicated": {
+            "brand": "NVIDIA",
+            "model": "GeForce RTX 4050",
+            "memory": "6 GB GDDR6"
+          }
+        }
+      },
+      "displaySpecifications": {
+        "size": "14 inches",
+        "resolution": "2880 x 1800 pixels",
+        "type": "OLED",
+        "refreshRate": "120 Hz",
+        "brightness": "400 nits",
+        "colorGamut": "100% DCI-P3",
+        "touchscreen": true,
+        "aspectRatio": "16:10",
+        "features": ["Anti-glare coating", "Low blue light certification"]
+      },
+      "connectivitySpecifications": {
+        "wireless": {
+          "wifi": "Wi-Fi 6E (802.11ax)",
+          "bluetooth": "Bluetooth 5.3"
+        },
+        "ports": [
+          "2x Thunderbolt 4 (USB-C)",
+          "1x USB 3.2 Gen 2 Type-A",
+          "1x HDMI 2.1",
+          "1x 3.5mm audio jack",
+          "1x SD card reader"
+        ],
+        "camera": {
+          "resolution": "1080p FHD",
+          "features": ["IR camera for Windows Hello", "Privacy shutter"]
+        },
+        "audio": {
+          "speakers": "Quad speakers with Dolby Atmos",
+          "microphones": "Dual-array microphones with AI noise cancellation"
+        }
+      },
+      "batterySpecifications": {
+        "capacity": "70 Wh",
+        "typicalUsage": "Up to 12 hours",
+        "videoPlayback": "Up to 15 hours",
+        "chargingTime": "0 to 80% in 45 minutes",
+        "powerAdapter": "65W USB-C"
+      },
+      "softwareSpecifications": {
+        "operatingSystem": "Windows 11 Pro",
+        "preinstalledSoftware": [
+          "Microsoft Office 365 (30-day trial)",
+          "TechCorp System Utility",
+          "TechCorp Security Suite"
+        ],
+        "securityFeatures": [
+          "TPM 2.0",
+          "Fingerprint reader",
+          "Facial recognition"
+        ]
+      },
+      "environmentalSpecifications": {
+        "operatingTemperature": "10°C to 35°C (50°F to 95°F)",
+        "storageTemperature": "-20°C to 60°C (-4°F to 140°F)",
+        "humidity": "10% to 90% (non-condensing)",
+        "altitude": "Up to 10,000 feet (3,048 meters)",
+        "sustainabilityFeatures": [
+          "Chassis made with 30% recycled materials",
+          "100% recyclable packaging",
+          "Energy-efficient components"
+        ]
+      }
+    }
+  },
+  {
+    "id": "PROD-2025-002",
+    "productName": "HealthTrack Pro Smartwatch",
+    "manufacturer": "FitTech Innovations",
+    "category": "Wearable Technology",
+    "type": "Product Specification",
+    "content": {
+      "generalSpecifications": {
+        "modelNumber": "HTP-200",
+        "releaseDate": "March 2025",
+        "dimensions": "45 x 45 x 10.5 mm",
+        "weight": "38g (without strap)",
+        "colors": ["Obsidian Black", "Silver", "Midnight Blue", "Rose Gold"],
+        "waterResistance": "5 ATM (50 meters)",
+        "warranty": "1-year limited warranty",
+        "certifications": ["IP68", "MIL-STD-810H"]
+      },
+      "displaySpecifications": {
+        "type": "AMOLED",
+        "size": "1.4 inches",
+        "resolution": "454 x 454 pixels",
+        "pixelDensity": "326 PPI",
+        "brightness": "1000 nits (peak)",
+        "alwaysOnDisplay": true,
+        "touchscreen": true,
+        "glassType": "Corning Gorilla Glass Victus",
+        "features": ["Anti-fingerprint coating", "Ambient light sensor"]
+      },
+      "performanceSpecifications": {
+        "processor": {
+          "chipset": "FitTech Wearable Platform 5.0",
+          "cores": "Dual-core 1.8 GHz"
+        },
+        "memory": "2 GB RAM",
+        "storage": "32 GB internal storage",
+        "operatingSystem": "FitOS 4.0"
+      },
+      "connectivitySpecifications": {
+        "bluetooth": "Bluetooth 5.3",
+        "wifi": "Wi-Fi 802.11 b/g/n",
+        "nfc": true,
+        "gps": {
+          "supported": true,
+          "systems": ["GPS", "GLONASS", "Galileo", "BeiDou", "QZSS"]
+        },
+        "cellular": {
+          "supported": true,
+          "technology": "4G LTE",
+          "eSIM": true
+        }
+      },
+      "healthMonitoringFeatures": {
+        "heartRateSensor": {
+          "type": "Optical heart rate sensor",
+          "continuousMonitoring": true,
+          "accuracy": "±2 BPM under normal conditions"
+        },
+        "ecgMonitoring": {
+          "supported": true,
+          "medicalGrade": "FDA-cleared for irregular heart rhythm notification"
+        },
+        "bloodOxygenMonitoring": {
+          "supported": true,
+          "accuracy": "±2% under normal conditions"
+        },
+        "sleepTracking": {
+          "stages": ["Light", "Deep", "REM"],
+          "breathingRate": true,
+          "sleepScore": true
+        },
+        "stressMonitoring": {
+          "supported": true,
+          "method": "Heart rate variability analysis"
+        },
+        "temperatureSensor": {
+          "supported": true,
+          "accuracy": "±0.1°C"
+        },
+        "additionalSensors": [
+          "3-axis accelerometer",
+          "Gyroscope",
+          "Ambient light sensor",
+          "Barometric altimeter"
+        ]
+      },
+      "fitnessFeatures": {
+        "activityModes": "100+ sport modes",
+        "autoActivityDetection": true,
+        "gpsTracking": true,
+        "calorieTracking": true,
+        "stepCounting": true,
+        "floorClimbing": true,
+        "swimTracking": {
+          "supported": true,
+          "strokeDetection": true,
+          "lapCounting": true,
+          "swolfScore": true
+        },
+        "workoutAnalysis": {
+          "vo2Max": true,
+          "trainingLoad": true,
+          "recoveryTime": true,
+          "performanceMetrics": true
+        }
+      },
+      "smartFeatures": {
+        "notifications": {
+          "calls": true,
+          "messages": true,
+          "email": true,
+          "apps": true,
+          "customizable": true
+        },
+        "voiceAssistant": {
+          "supported": true,
+          "assistants": ["Amazon Alexa", "Google Assistant"]
+        },
+        "musicControl": {
+          "storage": "8 GB dedicated for music",
+          "streaming": ["Spotify", "Apple Music", "Deezer"],
+          "controls": true
+        },
+        "contactlessPay": {
+          "supported": true,
+          "services": ["FitPay", "Google Pay", "Apple Pay"]
+        },
+        "emergencyFeatures": {
+          "fallDetection": true,
+          "sosAlerts": true,
+          "emergencyContacts": true
+        }
+      },
+      "batterySpecifications": {
+        "capacity": "420 mAh",
+        "typicalUsage": "Up to 7 days",
+        "gpsMode": "Up to 24 hours",
+        "alwaysOnDisplay": "Up to 3 days",
+        "chargingTime": "0 to 100% in 90 minutes",
+        "chargingMethod": "Magnetic wireless charging",
+        "powerSavingMode": true
+      },
+      "compatibilitySpecifications": {
+        "android": "Android 8.0 or later",
+        "ios": "iOS 14.0 or later",
+        "appName": "FitTech Health"
+      },
+      "packageContents": [
+        "HealthTrack Pro Smartwatch",
+        "Silicone sport band (S/M and M/L sizes)",
+        "Magnetic wireless charger",
+        "Quick start guide",
+        "Warranty information"
+      ]
+    }
+  },
+  {
+    "id": "PROD-2025-003",
+    "productName": "EcoBlend Pro Stand Mixer",
+    "manufacturer": "KitchenTech Appliances",
+    "category": "Home Appliances",
+    "type": "Product Specification",
+    "content": {
+      "generalSpecifications": {
+        "modelNumber": "KT-SM500",
+        "releaseDate": "February 2025",
+        "dimensions": "14.1 x 8.7 x 13.9 inches (35.8 x 22.1 x 35.3 cm)",
+        "weight": "22 lbs (10 kg)",
+        "colors": ["Matte Black", "Brushed Stainless", "Sage Green", "Cream"],
+        "warranty": "5-year limited warranty",
+        "certifications": ["UL Listed", "Energy Star", "ETL Sanitation"]
+      },
+      "performanceSpecifications": {
+        "motor": {
+          "type": "Direct-drive high-efficiency DC motor",
+          "power": "500 watts",
+          "speedSettings": "10 variable speeds",
+          "softStart": true
+        },
+        "capacity": {
+          "bowlSize": "5.5 quart (5.2 liter)",
+          "flourCapacity": "Up to 9 cups (1.1 kg)",
+          "doughCapacity": "Up to 4 pounds (1.8 kg)"
+        },
+        "mixingAction": {
+          "type": "Planetary mixing action",
+          "touchpoints": "67-point mixing action",
+          "bowlCoverage": "Complete bowl coverage"
+        },
+        "noiseLevel": "65 dB at maximum speed"
+      },
+      "constructionSpecifications": {
+        "bodyMaterial": "Die-cast zinc with premium enamel finish",
+        "bowlMaterial": "Polished stainless steel with handle",
+        "gearConstruction": "All-metal gear transmission",
+        "hubSystem": "Multi-purpose attachment hub",
+        "controlPanel": "Soft-touch electronic controls with LED display",
+        "feet": "Non-slip rubber feet for stability"
+      },
+      "includedAttachments": [
+        {
+          "name": "Flat beater",
+          "material": "Coated aluminum",
+          "dishwasherSafe": true,
+          "uses": "Cookies, cakes, frostings, mashed potatoes"
+        },
+        {
+          "name": "Dough hook",
+          "material": "Coated aluminum",
+          "dishwasherSafe": true,
+          "uses": "Yeast breads, pizza dough, pasta dough"
+        },
+        {
+          "name": "Wire whip",
+          "material": "Stainless steel",
+          "dishwasherSafe": true,
+          "uses": "Whipped cream, egg whites, light batters"
+        },
+        {
+          "name": "Pouring shield",
+          "material": "BPA-free transparent plastic",
+          "dishwasherSafe": true,
+          "uses": "Prevents splatter when adding ingredients"
+        }
+      ],
+      "optionalAttachments": [
+        "Pasta roller and cutter set",
+        "Food grinder",
+        "Vegetable spiralizer",
+        "Ice cream maker",
+        "Grain mill",
+        "Sausage stuffer",
+        "Citrus juicer",
+        "Food processor"
+      ],
+      "featuresAndFunctions": {
+        "bowlLift": "Lever-operated bowl lift mechanism",
+        "bowlLock": "Secure bowl locking system",
+        "overloadProtection": "Automatic motor protection system",
+        "timerFunction": "Built-in 30-minute timer with auto-shutoff",
+        "speedControl": "Electronic speed sensor maintains consistent speed",
+        "smartFeatures": {
+          "bluetoothConnectivity": true,
+          "appControl": "KitchenTech Connect app compatibility",
+          "recipeIntegration": "Access to 500+ guided recipes",
+          "customPrograms": "Save custom mixing programs"
+        }
+      },
+      "electricalSpecifications": {
+        "voltage": "120V AC",
+        "frequency": "60 Hz",
+        "powerConsumption": "500W maximum",
+        "cordLength": "4 feet (1.2 meters)",
+        "plugType": "3-prong grounded plug"
+      },
+      "sustainabilityFeatures": {
+        "energyEfficiency": "30% more energy efficient than previous models",
+        "materials": "25% recycled materials in non-mechanical components",
+        "packaging": "100% recyclable packaging made from 80% recycled materials",
+        "repairability": "Modular design for easy repair and part replacement",
+        "powerSavingMode": "Automatic standby mode after 10 minutes of inactivity"
+      },
+      "careAndMaintenance": {
+        "cleaning": "Wipe base with damp cloth, attachments dishwasher safe",
+        "storage": "Attachment storage case included",
+        "maintenance": "No oiling or regular maintenance required",
+        "serviceIntervals": "Recommended professional inspection every 5 years"
+      },
+      "packageContents": [
+        "EcoBlend Pro Stand Mixer base unit",
+        "5.5-quart stainless steel bowl",
+        "Flat beater attachment",
+        "Dough hook attachment",
+        "Wire whip attachment",
+        "Pouring shield",
+        "Instruction manual",
+        "Recipe booklet",
+        "Warranty card"
+      ]
+    }
+  }
+]

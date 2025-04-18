@@ -1,0 +1,331 @@
+[
+  {
+    "id": "INS-2025-001",
+    "policyNumber": "HO-12345678",
+    "policyType": "Homeowners Insurance",
+    "issueDate": "2025-01-10",
+    "insurer": "Reliable Insurance Company",
+    "content": {
+      "policyHolder": {
+        "name": "John and Sarah Thompson",
+        "address": "123 Oak Street, Springfield, IL 62704",
+        "contactInfo": {
+          "phone": "555-123-4567",
+          "email": "jthompson@email.com"
+        }
+      },
+      "propertyDetails": {
+        "address": "123 Oak Street, Springfield, IL 62704",
+        "yearBuilt": 2010,
+        "constructionType": "Frame",
+        "squareFootage": 2400,
+        "numberOfStories": 2,
+        "roofType": "Asphalt Shingle",
+        "heatingSystem": "Central Gas",
+        "securityFeatures": ["Smoke Detectors", "Burglar Alarm", "Deadbolt Locks"]
+      },
+      "coverageSummary": {
+        "dwellingCoverage": {
+          "limit": "$450,000",
+          "deductible": "$1,000",
+          "premium": "$1,250"
+        },
+        "personalPropertyCoverage": {
+          "limit": "$225,000",
+          "deductible": "$1,000",
+          "premium": "$450"
+        },
+        "liabilityCoverage": {
+          "limit": "$300,000",
+          "premium": "$200"
+        },
+        "medicalPaymentsCoverage": {
+          "limit": "$5,000",
+          "premium": "$50"
+        },
+        "additionalLivingExpenses": {
+          "limit": "$90,000",
+          "premium": "$100"
+        },
+        "endorsements": [
+          {
+            "type": "Water Backup Coverage",
+            "limit": "$5,000",
+            "premium": "$75"
+          },
+          {
+            "type": "Scheduled Personal Property",
+            "items": [
+              {
+                "description": "Diamond Engagement Ring",
+                "value": "$8,500",
+                "premium": "$85"
+              }
+            ]
+          }
+        ],
+        "totalAnnualPremium": "$2,210"
+      },
+      "exclusions": [
+        "Flood damage",
+        "Earth movement",
+        "Intentional loss",
+        "Nuclear hazard",
+        "War",
+        "Governmental action",
+        "Wear and tear",
+        "Mold, fungus, or wet rot"
+      ],
+      "claimsProcess": {
+        "reportingInstructions": "Report claims promptly by calling our 24/7 claims hotline at 1-800-555-CLAIM or online at www.reliableinsurance.com/claims",
+        "requiredDocumentation": [
+          "Completed claim form",
+          "Police report (if applicable)",
+          "Photos of damage",
+          "Inventory of damaged items",
+          "Repair estimates"
+        ],
+        "timelineForSettlement": "Claims are typically processed within 30 days of receiving all required documentation"
+      },
+      "policyPeriod": {
+        "effectiveDate": "2025-02-01",
+        "expirationDate": "2026-02-01",
+        "renewalTerms": "Policy will automatically renew unless cancelled by either party"
+      }
+    }
+  },
+  {
+    "id": "INS-2025-002",
+    "policyNumber": "AL-98765432",
+    "policyType": "Auto Insurance",
+    "issueDate": "2025-02-15",
+    "insurer": "Reliable Insurance Company",
+    "content": {
+      "policyHolder": {
+        "name": "Michael Chen",
+        "address": "456 Maple Avenue, Chicago, IL 60601",
+        "contactInfo": {
+          "phone": "555-987-6543",
+          "email": "mchen@email.com"
+        },
+        "driverLicense": "IL1234567",
+        "dateOfBirth": "1985-06-12"
+      },
+      "vehicleInformation": [
+        {
+          "year": 2023,
+          "make": "Toyota",
+          "model": "RAV4",
+          "vin": "4T3Z1RFX5PU123456",
+          "primaryUse": "Commute to Work",
+          "estimatedAnnualMileage": 12000,
+          "garageLocation": "456 Maple Avenue, Chicago, IL 60601"
+        }
+      ],
+      "driverInformation": [
+        {
+          "name": "Michael Chen",
+          "relationship": "Named Insured",
+          "dateOfBirth": "1985-06-12",
+          "licenseNumber": "IL1234567",
+          "licenseState": "IL",
+          "drivingRecord": {
+            "accidents": 0,
+            "violations": 0,
+            "claims": 0
+          }
+        },
+        {
+          "name": "Jennifer Chen",
+          "relationship": "Spouse",
+          "dateOfBirth": "1987-09-23",
+          "licenseNumber": "IL7654321",
+          "licenseState": "IL",
+          "drivingRecord": {
+            "accidents": 0,
+            "violations": 1,
+            "claims": 0
+          }
+        }
+      ],
+      "coverageSummary": {
+        "liabilityCoverage": {
+          "bodilyInjury": {
+            "perPerson": "$250,000",
+            "perAccident": "$500,000",
+            "premium": "$450"
+          },
+          "propertyDamage": {
+            "limit": "$100,000",
+            "premium": "$200"
+          }
+        },
+        "medicalPayments": {
+          "limit": "$5,000",
+          "premium": "$75"
+        },
+        "uninsuredMotorist": {
+          "bodilyInjury": {
+            "perPerson": "$250,000",
+            "perAccident": "$500,000",
+            "premium": "$125"
+          },
+          "propertyDamage": {
+            "limit": "$50,000",
+            "deductible": "$250",
+            "premium": "$50"
+          }
+        },
+        "comprehensiveCoverage": {
+          "deductible": "$500",
+          "premium": "$150"
+        },
+        "collisionCoverage": {
+          "deductible": "$500",
+          "premium": "$300"
+        },
+        "rentalReimbursement": {
+          "limit": "$30 per day, maximum $900",
+          "premium": "$25"
+        },
+        "roadside assistance": {
+          "premium": "$15"
+        },
+        "totalAnnualPremium": "$1,390"
+      },
+      "discounts": [
+        {
+          "type": "Multi-Policy",
+          "description": "10% discount for having home and auto insurance",
+          "amount": "$139"
+        },
+        {
+          "type": "Safe Driver",
+          "description": "15% discount for clean driving record",
+          "amount": "$208.50"
+        },
+        {
+          "type": "Anti-Theft Device",
+          "description": "5% discount on comprehensive coverage",
+          "amount": "$7.50"
+        }
+      ],
+      "exclusions": [
+        "Intentional damage",
+        "Using vehicle for commercial purposes",
+        "Racing or speed contests",
+        "Driving under the influence of alcohol or drugs",
+        "Damage due to war or nuclear hazard"
+      ],
+      "policyPeriod": {
+        "effectiveDate": "2025-03-01",
+        "expirationDate": "2025-09-01",
+        "renewalTerms": "Policy will automatically renew for 6-month terms unless cancelled"
+      }
+    }
+  },
+  {
+    "id": "INS-2025-003",
+    "policyNumber": "LI-56789012",
+    "policyType": "Life Insurance",
+    "issueDate": "2025-01-25",
+    "insurer": "Secure Life Insurance Company",
+    "content": {
+      "policyHolder": {
+        "name": "Emily Rodriguez",
+        "address": "789 Pine Street, Austin, TX 78701",
+        "contactInfo": {
+          "phone": "555-456-7890",
+          "email": "erodriguez@email.com"
+        },
+        "dateOfBirth": "1982-04-18",
+        "gender": "Female",
+        "smokingStatus": "Non-smoker",
+        "occupation": "Software Engineer"
+      },
+      "policyDetails": {
+        "type": "Term Life Insurance",
+        "term": "20 years",
+        "faceAmount": "$750,000",
+        "premiumPaymentFrequency": "Monthly",
+        "premiumAmount": "$45.75",
+        "guaranteedRenewable": true,
+        "conversionOption": "Convertible to permanent life insurance before age 65 without medical examination"
+      },
+      "beneficiaries": [
+        {
+          "name": "David Rodriguez",
+          "relationship": "Spouse",
+          "dateOfBirth": "1980-09-30",
+          "benefitPercentage": "70%",
+          "beneficiaryType": "Primary"
+        },
+        {
+          "name": "Sofia Rodriguez",
+          "relationship": "Daughter",
+          "dateOfBirth": "2015-07-22",
+          "benefitPercentage": "15%",
+          "beneficiaryType": "Primary"
+        },
+        {
+          "name": "Lucas Rodriguez",
+          "relationship": "Son",
+          "dateOfBirth": "2018-03-10",
+          "benefitPercentage": "15%",
+          "beneficiaryType": "Primary"
+        },
+        {
+          "name": "Maria Gonzalez",
+          "relationship": "Sister",
+          "dateOfBirth": "1984-11-05",
+          "benefitPercentage": "100%",
+          "beneficiaryType": "Contingent"
+        }
+      ],
+      "medicalInformation": {
+        "underwritingClass": "Preferred Plus",
+        "medicalExamDate": "2025-01-10",
+        "healthConditions": "None",
+        "familyMedicalHistory": {
+          "father": "Hypertension, age 65",
+          "mother": "No significant medical conditions, age 62"
+        }
+      },
+      "riders": [
+        {
+          "type": "Waiver of Premium",
+          "description": "Waives premium payments if insured becomes totally disabled",
+          "monthlyPremium": "$3.25"
+        },
+        {
+          "type": "Accelerated Death Benefit",
+          "description": "Allows early access to a portion of the death benefit if diagnosed with terminal illness",
+          "monthlyPremium": "$2.50"
+        },
+        {
+          "type": "Child Term Rider",
+          "description": "Provides $10,000 of coverage for each child until age 25",
+          "monthlyPremium": "$5.00"
+        }
+      ],
+      "exclusions": [
+        "Suicide within first two years of policy",
+        "Material misrepresentation on application",
+        "Death resulting from participation in illegal activities"
+      ],
+      "claimsProcess": {
+        "requiredDocumentation": [
+          "Certified death certificate",
+          "Completed claim form",
+          "Beneficiary identification",
+          "Original policy document (if available)"
+        ],
+        "timelineForSettlement": "Claims are typically processed within 30 days of receiving all required documentation"
+      },
+      "policyPeriod": {
+        "effectiveDate": "2025-02-01",
+        "expirationDate": "2045-02-01"
+      }
+    }
+  }
+]

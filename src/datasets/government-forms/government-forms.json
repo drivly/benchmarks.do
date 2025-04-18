@@ -1,0 +1,246 @@
+[
+  {
+    "id": "GOV-2025-001",
+    "formNumber": "W-4",
+    "formTitle": "Employee's Withholding Certificate",
+    "agency": "Internal Revenue Service",
+    "year": "2025",
+    "type": "Tax Form",
+    "content": {
+      "personalInformation": {
+        "firstName": "Michael",
+        "lastName": "Johnson",
+        "socialSecurityNumber": "XXX-XX-1234",
+        "address": "123 Oak Street, Springfield, IL 62704",
+        "filingStatus": "Married filing jointly"
+      },
+      "withholding": {
+        "multipleJobs": true,
+        "claimDependents": {
+          "dependentsAmount": "$4,000",
+          "otherIncome": "$2,500",
+          "deductions": "$12,000"
+        },
+        "extraWithholding": "$50 per pay period"
+      },
+      "employerInformation": {
+        "name": "TechCorp Industries",
+        "employerIdentificationNumber": "12-3456789",
+        "address": "500 Corporate Way, Springfield, IL 62704"
+      },
+      "certifications": {
+        "signatureRequired": true,
+        "dateRequired": true,
+        "penalties": "Penalties may apply for willfully supplying false information"
+      },
+      "instructions": {
+        "purpose": "Complete Form W-4 so that your employer can withhold the correct federal income tax from your pay.",
+        "whenToFile": "When starting a new job or when your personal or financial situation changes.",
+        "steps": [
+          "Enter personal information",
+          "Multiple jobs or spouse works",
+          "Claim dependents",
+          "Other adjustments",
+          "Sign and date"
+        ]
+      }
+    }
+  },
+  {
+    "id": "GOV-2025-002",
+    "formNumber": "I-9",
+    "formTitle": "Employment Eligibility Verification",
+    "agency": "U.S. Citizenship and Immigration Services",
+    "year": "2025",
+    "type": "Employment Form",
+    "content": {
+      "employeeInformation": {
+        "firstName": "Sarah",
+        "lastName": "Garcia",
+        "middleInitial": "M",
+        "otherNames": "",
+        "address": "456 Maple Avenue, Chicago, IL 60601",
+        "dateOfBirth": "1990-05-15",
+        "socialSecurityNumber": "XXX-XX-5678",
+        "email": "sgarcia@email.com",
+        "phone": "312-555-1234"
+      },
+      "attestation": {
+        "citizenshipStatus": "U.S. Citizen",
+        "alienRegistrationNumber": "",
+        "formI94Number": "",
+        "foreignPassportNumber": "",
+        "countryOfIssuance": ""
+      },
+      "documentation": {
+        "listADocuments": [
+          {
+            "documentTitle": "U.S. Passport",
+            "issuingAuthority": "U.S. Department of State",
+            "documentNumber": "123456789",
+            "expirationDate": "2030-08-15"
+          }
+        ],
+        "listBDocuments": [],
+        "listCDocuments": []
+      },
+      "employerVerification": {
+        "employerName": "Global Innovations Inc.",
+        "employerTitle": "HR Manager",
+        "businessName": "Global Innovations Inc.",
+        "businessAddress": "789 Corporate Blvd, Chicago, IL 60602",
+        "dateOfEmployment": "2025-03-15",
+        "dateOfVerification": "2025-03-10"
+      },
+      "reverification": {
+        "required": false,
+        "newName": "",
+        "dateOfRehire": "",
+        "documentTitle": "",
+        "documentNumber": "",
+        "expirationDate": ""
+      },
+      "instructions": {
+        "purpose": "Employers must verify employment eligibility and identity for all new employees.",
+        "timing": "Form must be completed within 3 business days of the employee's first day of employment.",
+        "retention": "Employers must retain completed Form I-9 for 3 years after the date of hire or 1 year after employment ends, whichever is later.",
+        "penalties": "Penalties for non-compliance include civil fines and criminal prosecution."
+      }
+    }
+  },
+  {
+    "id": "GOV-2025-003",
+    "formNumber": "SF-86",
+    "formTitle": "Questionnaire for National Security Positions",
+    "agency": "U.S. Office of Personnel Management",
+    "year": "2025",
+    "type": "Security Clearance Form",
+    "content": {
+      "personalInformation": {
+        "fullName": "Robert James Wilson",
+        "dateOfBirth": "1988-09-22",
+        "placeOfBirth": "Boston, Massachusetts, USA",
+        "socialSecurityNumber": "XXX-XX-9012",
+        "currentAddress": "789 Washington Street, Alexandria, VA 22314",
+        "phoneNumbers": {
+          "home": "703-555-6789",
+          "mobile": "703-555-1234",
+          "work": "703-555-4321"
+        },
+        "email": "rwilson@email.com",
+        "citizenship": "U.S. Citizen by Birth",
+        "passportInformation": {
+          "number": "987654321",
+          "issuingCountry": "United States",
+          "issuanceDate": "2020-05-10",
+          "expirationDate": "2030-05-09"
+        }
+      },
+      "residenceHistory": [
+        {
+          "address": "789 Washington Street, Alexandria, VA 22314",
+          "dateRange": "January 2022 - Present",
+          "status": "Own"
+        },
+        {
+          "address": "456 Lincoln Avenue, Arlington, VA 22201",
+          "dateRange": "March 2018 - December 2021",
+          "status": "Rent"
+        },
+        {
+          "address": "123 Jefferson Street, Washington, DC 20001",
+          "dateRange": "August 2015 - February 2018",
+          "status": "Rent"
+        }
+      ],
+      "educationHistory": [
+        {
+          "institution": "Georgetown University",
+          "location": "Washington, DC",
+          "degreeAwarded": "Master of Science in Cybersecurity",
+          "dateRange": "2013-2015"
+        },
+        {
+          "institution": "University of Virginia",
+          "location": "Charlottesville, VA",
+          "degreeAwarded": "Bachelor of Science in Computer Science",
+          "dateRange": "2009-2013"
+        }
+      ],
+      "employmentHistory": [
+        {
+          "employer": "Department of Defense",
+          "position": "Senior Cybersecurity Analyst",
+          "location": "Pentagon, Arlington, VA",
+          "dateRange": "January 2020 - Present",
+          "supervisorName": "Colonel Jennifer Martinez",
+          "supervisorContact": "jennifer.martinez@defense.gov"
+        },
+        {
+          "employer": "National Security Agency",
+          "position": "Cybersecurity Specialist",
+          "location": "Fort Meade, MD",
+          "dateRange": "June 2015 - December 2019",
+          "supervisorName": "David Thompson",
+          "supervisorContact": "d.thompson@nsa.gov"
+        }
+      ],
+      "foreignContacts": {
+        "hasContacts": true,
+        "contacts": [
+          {
+            "name": "Emma Clarke",
+            "relationship": "Friend",
+            "citizenship": "United Kingdom",
+            "dateOfFirstContact": "2018-07-15",
+            "frequencyOfContact": "Monthly",
+            "natureOfContact": "Personal friendship formed during international conference"
+          }
+        ]
+      },
+      "foreignTravel": [
+        {
+          "country": "United Kingdom",
+          "dateRange": "May 10-17, 2023",
+          "purpose": "International Cybersecurity Conference"
+        },
+        {
+          "country": "Germany",
+          "dateRange": "September 5-12, 2022",
+          "purpose": "NATO Joint Exercise"
+        },
+        {
+          "country": "Japan",
+          "dateRange": "March 15-25, 2021",
+          "purpose": "Bilateral Security Cooperation Meeting"
+        }
+      ],
+      "financialRecord": {
+        "delinquencies": false,
+        "bankruptcies": false,
+        "taxLiens": false,
+        "financialDifficulties": false,
+        "foreignBankAccounts": false
+      },
+      "substanceUse": {
+        "alcoholAbuse": false,
+        "illegalDrugUse": {
+          "past7Years": false,
+          "details": ""
+        },
+        "drugTreatment": false
+      },
+      "criminalRecord": {
+        "arrests": false,
+        "charges": false,
+        "convictions": false,
+        "domesticViolence": false
+      },
+      "certifications": {
+        "informationAccuracy": "I certify that my responses are true, complete, and correct to the best of my knowledge and belief.",
+        "understandingOfPenalties": "I understand that knowingly providing false statements can be punished by fine or imprisonment or both.",
+        "consentToInvestigation": "I authorize investigation of all statements provided on this form."
+      }
+    }
+  }
+]

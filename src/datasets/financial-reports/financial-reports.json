@@ -1,0 +1,187 @@
+[
+  {
+    "id": "FIN-2025-001",
+    "title": "Quarterly Financial Report - Q1 2025",
+    "company": "Tech Innovations Inc.",
+    "period": "January 1 - March 31, 2025",
+    "type": "Quarterly Report",
+    "content": {
+      "summary": "Tech Innovations Inc. reports strong first quarter results with revenue growth of 15% year-over-year, driven by expansion in cloud services and new product launches.",
+      "financial_highlights": {
+        "revenue": "$245.8 million (15% increase from Q1 2024)",
+        "gross_profit": "$142.6 million (58% margin)",
+        "operating_income": "$38.2 million (15.5% margin)",
+        "net_income": "$29.4 million (12% margin)",
+        "earnings_per_share": "$0.87 (18% increase from Q1 2024)",
+        "cash_flow_from_operations": "$42.5 million"
+      },
+      "segment_performance": [
+        {
+          "name": "Cloud Services",
+          "revenue": "$128.4 million",
+          "growth": "22%",
+          "operating_margin": "18.5%"
+        },
+        {
+          "name": "Software Licenses",
+          "revenue": "$75.3 million",
+          "growth": "8%",
+          "operating_margin": "14.2%"
+        },
+        {
+          "name": "Professional Services",
+          "revenue": "$42.1 million",
+          "growth": "9%",
+          "operating_margin": "10.8%"
+        }
+      ],
+      "balance_sheet_highlights": {
+        "cash_and_investments": "$186.5 million",
+        "total_assets": "$845.2 million",
+        "total_debt": "$120.3 million",
+        "stockholders_equity": "$584.6 million"
+      },
+      "outlook": {
+        "full_year_revenue_guidance": "$1.02 - $1.05 billion",
+        "full_year_earnings_per_share_guidance": "$3.40 - $3.60"
+      },
+      "risk_factors": [
+        "Increasing competition in cloud services market",
+        "Global economic uncertainty",
+        "Regulatory changes in key markets",
+        "Foreign exchange rate fluctuations"
+      ]
+    }
+  },
+  {
+    "id": "FIN-2025-002",
+    "title": "Annual Report - FY 2024",
+    "company": "Global Manufacturing Corp.",
+    "period": "January 1 - December 31, 2024",
+    "type": "Annual Report",
+    "content": {
+      "summary": "Global Manufacturing Corp. delivered solid performance in 2024 despite supply chain challenges, with revenue of $1.85 billion and expanded market share in key regions.",
+      "financial_highlights": {
+        "revenue": "$1.85 billion (7% increase from FY 2023)",
+        "gross_profit": "$720.6 million (39% margin)",
+        "operating_income": "$245.2 million (13.2% margin)",
+        "net_income": "$187.4 million (10.1% margin)",
+        "earnings_per_share": "$4.25 (9% increase from FY 2023)",
+        "cash_flow_from_operations": "$312.5 million",
+        "dividends_paid": "$82.3 million"
+      },
+      "segment_performance": [
+        {
+          "name": "Industrial Components",
+          "revenue": "$875.3 million",
+          "growth": "9%",
+          "operating_margin": "15.8%"
+        },
+        {
+          "name": "Consumer Products",
+          "revenue": "$645.2 million",
+          "growth": "6%",
+          "operating_margin": "12.4%"
+        },
+        {
+          "name": "Specialty Materials",
+          "revenue": "$329.5 million",
+          "growth": "4%",
+          "operating_margin": "10.2%"
+        }
+      ],
+      "geographic_performance": [
+        {
+          "region": "North America",
+          "revenue": "$820.4 million",
+          "growth": "6%"
+        },
+        {
+          "region": "Europe",
+          "revenue": "$545.3 million",
+          "growth": "5%"
+        },
+        {
+          "region": "Asia Pacific",
+          "revenue": "$374.8 million",
+          "growth": "12%"
+        },
+        {
+          "region": "Rest of World",
+          "revenue": "$109.5 million",
+          "growth": "3%"
+        }
+      ],
+      "balance_sheet_highlights": {
+        "cash_and_investments": "$425.8 million",
+        "total_assets": "$2.34 billion",
+        "total_debt": "$685.2 million",
+        "stockholders_equity": "$1.28 billion"
+      },
+      "strategic_initiatives": [
+        "Expansion of manufacturing capacity in Asia",
+        "New product development in sustainable materials",
+        "Digital transformation of supply chain",
+        "Cost reduction program targeting $45 million in annual savings"
+      ],
+      "outlook": {
+        "full_year_revenue_guidance": "$1.95 - $2.05 billion",
+        "full_year_earnings_per_share_guidance": "$4.50 - $4.80"
+      }
+    }
+  },
+  {
+    "id": "FIN-2025-003",
+    "title": "Investor Presentation - Q2 2025",
+    "company": "HealthTech Solutions",
+    "period": "April 1 - June 30, 2025",
+    "type": "Investor Presentation",
+    "content": {
+      "summary": "HealthTech Solutions reports record Q2 results with strong performance across all business segments, driven by new product launches and expansion in telehealth services.",
+      "financial_highlights": {
+        "revenue": "$328.5 million (24% increase from Q2 2024)",
+        "gross_profit": "$196.4 million (59.8% margin)",
+        "operating_income": "$75.6 million (23% margin)",
+        "net_income": "$58.2 million (17.7% margin)",
+        "earnings_per_share": "$1.32 (27% increase from Q2 2024)",
+        "cash_flow_from_operations": "$84.3 million"
+      },
+      "segment_performance": [
+        {
+          "name": "Medical Devices",
+          "revenue": "$156.2 million",
+          "growth": "18%",
+          "operating_margin": "25.4%"
+        },
+        {
+          "name": "Telehealth Services",
+          "revenue": "$102.8 million",
+          "growth": "42%",
+          "operating_margin": "22.8%"
+        },
+        {
+          "name": "Healthcare Software",
+          "revenue": "$69.5 million",
+          "growth": "15%",
+          "operating_margin": "19.5%"
+        }
+      ],
+      "recent_developments": [
+        "FDA approval for new cardiac monitoring device",
+        "Expansion of telehealth platform to five new countries",
+        "Strategic partnership with major hospital network",
+        "Acquisition of AI diagnostics startup for $85 million"
+      ],
+      "balance_sheet_highlights": {
+        "cash_and_investments": "$245.8 million",
+        "total_assets": "$1.12 billion",
+        "total_debt": "$180.5 million",
+        "stockholders_equity": "$742.3 million"
+      },
+      "outlook": {
+        "full_year_revenue_guidance": "Raised to $1.30 - $1.35 billion",
+        "full_year_earnings_per_share_guidance": "Raised to $5.10 - $5.30"
+      }
+    }
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "MED-2025-001",
+    "patientId": "PT-10045",
+    "recordType": "Clinical Note",
+    "date": "2025-03-15",
+    "provider": "Dr. Sarah Johnson",
+    "content": "Patient presents with complaints of persistent headache for the past 3 days, described as throbbing pain in the frontal region. Pain rated as 7/10. Reports no visual disturbances, nausea, or vomiting. Patient has history of migraine. Vital signs within normal limits. Neurological exam unremarkable. Assessment: Migraine headache. Plan: Prescribed sumatriptan 50mg as needed, recommended hydration and stress reduction techniques. Follow-up in 2 weeks if symptoms persist.",
+    "diagnoses": ["Migraine without aura", "Chronic stress"],
+    "medications": [
+      {
+        "name": "Sumatriptan",
+        "dosage": "50mg",
+        "frequency": "As needed for migraine",
+        "route": "Oral"
+      },
+      {
+        "name": "Ibuprofen",
+        "dosage": "400mg",
+        "frequency": "Every 6 hours as needed for pain",
+        "route": "Oral"
+      }
+    ],
+    "vitalSigns": {
+      "temperature": "98.6°F",
+      "heartRate": "72 bpm",
+      "bloodPressure": "118/76 mmHg",
+      "respiratoryRate": "16 breaths/min",
+      "oxygenSaturation": "99%"
+    },
+    "labResults": []
+  },
+  {
+    "id": "MED-2025-002",
+    "patientId": "PT-20567",
+    "recordType": "Discharge Summary",
+    "date": "2025-04-02",
+    "provider": "Dr. Michael Chen",
+    "content": "Patient was admitted on 3/30/2025 with acute appendicitis. Underwent laparoscopic appendectomy on 3/30/2025 without complications. Post-operative course was uneventful. Patient tolerated regular diet on post-op day 1. Pain well controlled with oral analgesics. Discharged home in stable condition with follow-up appointment scheduled in 2 weeks. Discharge medications include acetaminophen/hydrocodone for 3 days and prophylactic antibiotics for 7 days. Patient instructed on wound care, activity restrictions, and signs of infection to monitor for.",
+    "diagnoses": ["Acute appendicitis", "Post-operative status - laparoscopic appendectomy"],
+    "medications": [
+      {
+        "name": "Acetaminophen/Hydrocodone",
+        "dosage": "5/325mg",
+        "frequency": "Every 6 hours as needed for pain",
+        "route": "Oral",
+        "duration": "3 days"
+      },
+      {
+        "name": "Cefuroxime",
+        "dosage": "500mg",
+        "frequency": "Twice daily",
+        "route": "Oral",
+        "duration": "7 days"
+      }
+    ],
+    "vitalSigns": {
+      "temperature": "98.2°F",
+      "heartRate": "68 bpm",
+      "bloodPressure": "122/78 mmHg",
+      "respiratoryRate": "14 breaths/min",
+      "oxygenSaturation": "98%"
+    },
+    "labResults": [
+      {
+        "test": "WBC",
+        "result": "9.2 × 10^9/L",
+        "referenceRange": "4.5-11.0 × 10^9/L",
+        "date": "2025-04-01"
+      },
+      {
+        "test": "Hemoglobin",
+        "result": "13.8 g/dL",
+        "referenceRange": "13.5-17.5 g/dL",
+        "date": "2025-04-01"
+      },
+      {
+        "test": "Platelets",
+        "result": "250 × 10^9/L",
+        "referenceRange": "150-450 × 10^9/L",
+        "date": "2025-04-01"
+      }
+    ]
+  },
+  {
+    "id": "MED-2025-003",
+    "patientId": "PT-30982",
+    "recordType": "Radiology Report",
+    "date": "2025-03-25",
+    "provider": "Dr. Emily Rodriguez",
+    "content": "EXAMINATION: Chest X-ray, PA and Lateral\n\nCLINICAL INDICATION: Shortness of breath, cough for 1 week\n\nTECHNIQUE: PA and lateral chest radiographs were obtained.\n\nFINDINGS: Heart size is normal. Pulmonary vascularity is within normal limits. There is patchy opacity in the right lower lobe consistent with pneumonia. No pleural effusion or pneumothorax is identified. No acute osseous abnormality.\n\nIMPRESSION: Right lower lobe pneumonia. Recommend clinical correlation and follow-up radiograph after treatment to ensure resolution.",
+    "diagnoses": ["Right lower lobe pneumonia", "Acute bronchitis"],
+    "medications": [
+      {
+        "name": "Azithromycin",
+        "dosage": "500mg on day 1, then 250mg",
+        "frequency": "Once daily",
+        "route": "Oral",
+        "duration": "5 days"
+      },
+      {
+        "name": "Dextromethorphan",
+        "dosage": "20mg",
+        "frequency": "Every 4 hours as needed for cough",
+        "route": "Oral"
+      }
+    ],
+    "vitalSigns": {
+      "temperature": "100.2°F",
+      "heartRate": "88 bpm",
+      "bloodPressure": "126/82 mmHg",
+      "respiratoryRate": "20 breaths/min",
+      "oxygenSaturation": "95%"
+    },
+    "labResults": [
+      {
+        "test": "WBC",
+        "result": "12.5 × 10^9/L",
+        "referenceRange": "4.5-11.0 × 10^9/L",
+        "date": "2025-03-25",
+        "flag": "High"
+      },
+      {
+        "test": "CRP",
+        "result": "45 mg/L",
+        "referenceRange": "< 10 mg/L",
+        "date": "2025-03-25",
+        "flag": "High"
+      }
+    ]
+  }
+]
