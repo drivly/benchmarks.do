@@ -1,8 +1,8 @@
 import { evalite } from 'evalite'
 import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
-import { models } from '@/models'
-import { generateSyntheticDatasets, ClassifiedDocumentSchema } from '@/utils/dataset-generation'
+import { models } from '../../models.js'
+import { generateSyntheticDatasets, ClassifiedDocumentSchema } from '../../utils/dataset-generation.js'
 
 
 

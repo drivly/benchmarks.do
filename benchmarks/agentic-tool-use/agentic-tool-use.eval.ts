@@ -1,13 +1,13 @@
 import { evalite } from 'evalite'
 import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
-import { models } from '@/models'
+import { models } from '../../models.js'
 
-import invoiceProcessing from '@/datasets/agentic/invoice-processing.json'
-import customerOnboarding from '@/datasets/agentic/customer-onboarding.json'
-import dataValidation from '@/datasets/agentic/data-validation.json'
-import customerService from '@/datasets/agentic/customer-service.json'
-import researchReporting from '@/datasets/agentic/research-reporting.json'
+import invoiceProcessing from '../../datasets/agentic/invoice-processing.json'
+import customerOnboarding from '../../datasets/agentic/customer-onboarding.json'
+import dataValidation from '../../datasets/agentic/data-validation.json'
+import customerService from '../../datasets/agentic/customer-service.json'
+import researchReporting from '../../datasets/agentic/research-reporting.json'
 
 interface WorkflowStep {
   tool: string;
