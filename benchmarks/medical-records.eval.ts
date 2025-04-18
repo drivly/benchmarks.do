@@ -3,7 +3,7 @@ import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
 import { models } from '@/models'
 
-import medicalRecords from '../datasets/medical-records/medical-records.json'
+import medicalRecords from '@/datasets/medical-records/medical-records.json'
 
 const battleScorer = Battle as any
 

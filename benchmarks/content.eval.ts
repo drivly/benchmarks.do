@@ -3,7 +3,7 @@ import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
 import { models } from '@/models'
 
-import marketingPrompts from '../datasets/content/marketing_prompts.json'
+import marketingPrompts from '@/datasets/content/marketing_prompts.json'
 
 const battleScorer = Battle as any
 

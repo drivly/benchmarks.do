@@ -3,7 +3,7 @@ import { Battle } from 'autoevals'
 import { ai } from 'functions.do'
 import { models } from '@/models'
 
-import technicalDocumentation from '../datasets/technical-documentation/technical-documentation.json'
+import technicalDocumentation from '@/datasets/technical-documentation/technical-documentation.json'
 
 const battleScorer = Battle as any
 
