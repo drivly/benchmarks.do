@@ -1,3 +1,3 @@
-import './text-classification.eval.js'
+import './text-classification.eval'
 
 console.log('Text Classification benchmarks loaded')
